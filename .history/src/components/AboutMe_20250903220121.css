@@ -1,0 +1,32 @@
+.aboutme-container, .aboutme-section {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .aboutme-container, .aboutme-section {
+    max-width: 98vw;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutme-container, .aboutme-section {
+    max-width: 100vw;
+    padding: 10px 2px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}

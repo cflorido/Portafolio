@@ -1,0 +1,92 @@
+.career-history {
+
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.career-title {
+  font-family: 'MiFuentePersonalizada';
+  font-size: 3rem;
+  color: #925c93;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 30px;
+  padding-left: 20px;
+  border-left: 3px solid #925c93;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background: #925c93;
+  border-radius: 50%;
+  border: 4px solid #faf8ec;
+}
+
+.timeline-date {
+        font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #925c93;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(146, 92, 147, 0.15);
+}
+
+.job-title {
+        font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #925c93;
+  margin-bottom: 5px;
+}
+
+.company {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.timeline-content ul {
+        font-family: 'Montserrat', sans-serif;
+  padding-left: 20px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.timeline-content li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}

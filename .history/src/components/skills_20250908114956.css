@@ -1,0 +1,135 @@
+/* Skills.css */
+
+/* Reset útil para evitar sorpresas con tamaños */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Variables (fáciles de ajustar) */
+:root {
+  --card-radius: 12px;
+  --card-height: 220px; /* altura fija de las tarjetas */
+  --card-padding: 12px; /* espacio interno de cada slide */
+  --gap: 20px; /* separación entre slides */
+  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --primary-bg: #ffffff;
+}
+
+/* Contenedor general (centrado y con padding para que no aparezcan cortados) */
+.skills-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;           /* evita que las tarjetas se vean 'cortadas' en los laterales */
+  overflow: visible;      /* importante para que los controles no se oculten */
+}
+
+/* Estilos del propio Swiper (opcional) */
+.swiper {
+  padding-bottom: 32px; /* espacio para paginación/indicadores */
+}
+
+/* Ajustamos el espacio entre slides usando el gap del elemento .swiper-wrapper
+   pero también dejamos padding en cada slide para mantener tamaño consistente */
+.swiper-wrapper {
+  gap: var(--gap);
+}
+
+/* Cada slide: tamaño fijo (ancho flexible según slidesPerView), mismo alto */
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--card-height) !important; /* forceamos la altura para uniformidad */
+  padding: var(--card-padding);
+}
+
+/* Tarjeta interior (contenido de la slide) */
+.skill-card {
+  width: 100%;
+  height: 100%;
+  background: var(--primary-bg);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* Efecto hover — escalado sutil */
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Imagen dentro de la tarjeta: ocupando todo, centrada y sin deformar */
+.skill-card img {
+  width: 100%;
+  height: calc(100% - 60px); /* deja espacio para título/label */
+  object-fit: cover;         /* evita que la imagen se deforme */
+  display: block;
+}
+
+/* Contenido textual dentro de la tarjeta */
+.skill-card .skill-title {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.0), rgba(255,255,255,0.95));
+}
+
+/* Estilo para los bullets/paginación (puedes modificar colores) */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 0.6;
+  background: #bdbdbd;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #925c93; /* color activo */
+}
+
+/* Flechas de navegación (puedes ajustar tamaños y posición) */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #222;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* Evita que la flecha quede cortada en móviles */
+.swiper-button-prev { left: 8px; }
+.swiper-button-next { right: 8px; }
+
+/* Responsive: 3 slides desktop, 2 tablet, 1 móvil. Ajusta según breakpoints de Swiper también */
+@media (max-width: 1024px) {
+  :root { --card-height: 200px; }
+}
+
+@media (max-width: 768px) {
+  /* Si quieres que slidesPerView cambie desde JS/JSX recuerda configurar breakpoints en Swiper.
+     Aquí sólo ajustamos apariencia y alto para móviles */
+  :root { --card-height: 180px; }
+  .skills-wrapper { padding: 16px; }
+  .swiper-button-prev, .swiper-button-next { display: none; } /* opcional: esconder flechas en móvil */
+}
+
+/* Util: si la imagen tiene ícono en vez de foto */
+.skill-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}

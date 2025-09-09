@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(to bottom, #f9d9e3, #fff4e3);
+  color: #d94f70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.portfolio-container {
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 10px 0;
+
+  /* Degradado más intenso */
+  background: linear-gradient(90deg, #ff3366, #ff6699, #ffcc66);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.avatar {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+}

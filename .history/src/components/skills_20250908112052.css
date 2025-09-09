@@ -1,0 +1,81 @@
+.skills-section {
+  padding: 40px;
+  text-align: center;
+}
+
+.skills-title {
+  font-family: 'MiFuentePersonalizada';
+  font-size: 3rem;
+  color: #925c93;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.skills-swiper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 0;
+  overflow: visible; /* 👈 para que no se corten */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.skill-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0px 5px 15px rgba(146, 92, 147, 0.25);
+  text-align: left;
+  width: 280px;   /* 👈 tamaño fijo */
+  height: 220px;  /* 👈 tamaño fijo */
+  transition: all 0.4s ease;
+}
+
+/* 🔹 Tarjeta activa (centro) */
+.swiper-slide-active .skill-card {
+  transform: scale(1.15);
+  background: #925c93;
+  color: #fff;
+  box-shadow: 0px 10px 30px rgba(146, 92, 147, 0.5);
+  z-index: 10;
+}
+
+/* 🔹 Títulos */
+.skill-category {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* 🔹 Lista */
+.skill-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.skill-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  border-radius: 50%;
+}

@@ -1,0 +1,38 @@
+.carrusel-contenedor {
+  width: 100%;
+  max-width: 1000px; /* tamaño máximo del carrusel */
+  margin: 0 auto;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.miSwiper {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.tarjeta {
+  width: 280px;
+  height: 180px;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Tarjeta normal */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* Tarjeta activa (del centro) */
+.swiper-slide-active .tarjeta {
+  transform: scale(1.15);
+  background-color: #ff6f61;
+  color: white;
+}

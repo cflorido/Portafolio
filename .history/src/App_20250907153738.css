@@ -1,0 +1,83 @@
+/* App.css */
+body {
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(to bottom, #faf8ec, #faf8ec); /* fondo base */
+    color: #d94f70;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    user-select: none;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Bolas difusas */
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(220,197,226,0.4) 10%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: mover 25s infinite alternate ease-in-out;
+    filter: blur(40px);
+}
+
+body::before {
+    top: -150px;
+    left: -150px;
+}
+
+body::after {
+    bottom: -150px;
+    right: -150px;
+}
+
+@keyframes mover {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(80px, 100px) scale(1.1); }
+    100% { transform: translate(-60px, -70px) scale(0.9); }
+}
+
+/* Contenedor del hero */
+.portfolio-container {
+    position: relative;
+    z-index: 1; /* encima de las bolas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Texto principal */
+.hero-content h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+    color: #925c93; /* un poco más suave que el texto principal */
+}
+
+/* Imagen animada */
+.hero-image {
+    margin-top: 30px;
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}

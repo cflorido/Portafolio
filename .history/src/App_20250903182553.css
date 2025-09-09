@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'Toboggan';
+  src: url('/Toboggan OTF/Toboggan-MediumItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+    --sync-gradient: linear-gradient(270deg,  #f8d5b9, #e88b99);
+}
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(to bottom, #f9d9e3, #fff4e3);
+    color: #d94f70;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    user-select: none;
+}
+
+.portfolio-container {
+    text-align: center;
+}
+
+header h1 {
+  user-select: none;
+  font-family: 'Toboggan', sans-serif;
+  font-size: 10rem;
+  font-weight: bold;
+  margin: 0;   /* 🔹 Elimina todos los márgenes */
+  
+  /* Gradiente */
+  background: var(--sync-gradient);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientMove 20s ease infinite;
+}
+
+header h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: left;
+  color: #000;
+  user-select: none;
+  margin: 0;   /* 🔹 Elimina todos los márgenes */
+}
+
+header p {
+  font-family: 'Cinzel Decorative', serif;
+    font-size: 140px;
+    font-style: italic;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-stage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avatar-pill {
+    position: absolute;
+    z-index: 1;
+    width: min(320vw, 1000px);
+    height: 130px;
+    
+    /* 🔹 Usando la misma variable CSS */
+    background: var(--sync-gradient);
+    background-size: 400% 400%;
+    border-radius: 70px;
+
+    overflow: hidden;
+    animation: gradientMove 20s ease infinite;
+}
+
+/* Bolitas animadas */
+.avatar-pill::before,
+.avatar-pill::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: radial-gradient(circle 6px, rgba(255,255,255,0.8) 70%, transparent 100%),
+                      radial-gradient(circle 10px, rgba(255,200,230,0.6) 70%, transparent 100%),
+                      radial-gradient(circle 8px, rgba(255,180,210,0.5) 70%, transparent 100%),
+                      radial-gradient(circle 12px, rgba(255,220,240,0.4) 70%, transparent 100%);
+    background-repeat: repeat;
+    animation: floatBalls 60s linear infinite;
+}
+
+.avatar-pill::after {
+    animation-duration: 90s;
+    opacity: 0.7;
+}
+
+/* 🔹 Animación sincronizada para ambos elementos */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes floatBalls {
+    from { transform: translate(0, 0); }
+    to   { transform: translate(200px, 200px); }
+}
+
+.avatar {
+    position: relative;
+    z-index: 2;
+    width: 330px;
+    border-radius: 80%;
+    display: block;
+    margin: auto;
+}
+
+/* 🔹 Clase auxiliar por si quieres aplicar el gradiente a otros elementos */
+.sync-gradient {
+    background: var(--sync-gradient);
+    background-size: 400% 400%;
+    animation: gradientMove 40s ease infinite;
+}
+
+.welcome {
+  font-size: 2rem;   /* 🔹 Cambia el tamaño como quieras */
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: bold;
+  margin: 0;
+  color: #e88b99;
+}
+.portfolio-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.year {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.5rem;
+  text-align: right;      /* Alinea el texto a la derecha */
+  width: 95%;            /* Ocupa todo el ancho de su contenedor */
+  display: block;         /* Asegura que el span se comporte como bloque */
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.subtitle .name {
+  font-weight: bold;
+}
+
+.subtitle .role {
+  border: 1px solid #000;
+  border-radius: 15px;
+  padding: 2px 10px;
+  font-size: 0.9rem;
+}

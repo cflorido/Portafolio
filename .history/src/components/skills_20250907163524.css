@@ -1,0 +1,109 @@
+.skills-section {
+  padding: 20px;
+  width: 90%; /* ocupar todo el ancho */
+  max-width: 90%; /* elimina el límite de 1000px */
+  overflow: hidden; /* evita scroll raro en el contenedor */
+}
+
+.skills-title {
+    font-family: 'MiFuentePersonalizada';
+  font-size: 3rem;
+  color: #925c93;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(146, 92, 147, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.skill-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 25px rgba(146, 92, 147, 0.25);
+}
+
+.skill-category {
+  font-size: 1.5rem;
+  color: #4e3b61;
+  margin-bottom: 15px;
+}
+
+.skill-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-list li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+.skills-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.skills-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px;
+  scroll-behavior: smooth;
+}
+
+.skills-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow {
+  background: #925c93;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 0.8;
+  transition: background 0.3s;
+}
+
+.arrow:hover {
+  background: #d94f70;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.skill-card {
+  flex: 0 0 250px;
+  scroll-snap-align: start;
+}

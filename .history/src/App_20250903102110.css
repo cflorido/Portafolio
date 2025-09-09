@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(to bottom, #f9d9e3, #f4b6c2);
+  color: #d94f70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+.portfolio-container {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.avatar {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+}

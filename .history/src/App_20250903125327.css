@@ -1,0 +1,135 @@
+:root {
+    --sync-gradient: linear-gradient(270deg,   #f08489);
+}
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(to bottom, #f3a7b0, #faf4e6);
+    color: #d94f70;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    user-select: none;
+}
+
+.portfolio-container {
+    text-align: center;
+}
+
+header h1 {
+  user-select: none;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 10rem;
+    font-weight: bold;
+    margin: 10px 0;
+    
+    /* 🔹 Usando la variable CSS para sincronizar */
+    background: var(--sync-gradient);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientMove 20s ease infinite;
+}
+
+header h2 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: left;    /* Alinea a la izquierda */
+    color: #000;  
+    user-select: none;       /* Color negro */
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-stage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avatar-pill {
+    position: absolute;
+    z-index: 1;
+    width: min(320vw, 1000px);
+    height: 130px;
+    
+    /* 🔹 Usando la misma variable CSS */
+    background: var(--sync-gradient);
+    background-size: 400% 400%;
+    border-radius: 60px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+    animation: gradientMove 20s ease infinite;
+}
+
+/* Bolitas animadas */
+.avatar-pill::before,
+.avatar-pill::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background-image: radial-gradient(circle 6px, rgba(255,255,255,0.8) 70%, transparent 100%),
+                      radial-gradient(circle 10px, rgba(255,200,230,0.6) 70%, transparent 100%),
+                      radial-gradient(circle 8px, rgba(255,180,210,0.5) 70%, transparent 100%),
+                      radial-gradient(circle 12px, rgba(255,220,240,0.4) 70%, transparent 100%);
+    background-repeat: repeat;
+    animation: floatBalls 60s linear infinite;
+}
+
+.avatar-pill::after {
+    animation-duration: 90s;
+    opacity: 0.7;
+}
+
+/* 🔹 Animación sincronizada para ambos elementos */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes floatBalls {
+    from { transform: translate(0, 0); }
+    to   { transform: translate(200px, 200px); }
+}
+
+.avatar {
+    position: relative;
+    z-index: 2;
+    width: 330px;
+    border-radius: 80%;
+    display: block;
+    margin: auto;
+}
+
+/* 🔹 Clase auxiliar por si quieres aplicar el gradiente a otros elementos */
+.sync-gradient {
+    background: var(--sync-gradient);
+    background-size: 400% 400%;
+    animation: gradientMove 40s ease infinite;
+}
