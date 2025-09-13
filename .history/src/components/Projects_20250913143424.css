@@ -10,12 +10,6 @@
   color: #4e3b61;
    margin-bottom: 5%;
 }
-.github-link {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  text-decoration: none; /* 👈 opcional, para quitar el subrayado */
-  color: inherit;        /* 👈 mantiene el color del texto actual */
-}
 
 /* Menú lateral */
 .projects-menu {
@@ -77,7 +71,7 @@
           font-family: 'Montserrat', sans-serif;
   color: #925c93;
   margin-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 html, body {
   margin: 0;
@@ -87,7 +81,7 @@ html, body {
 }
 .prjects-title {
   font-family: 'Outfit', sans-serif;
-  font-weight: 400; /* prueba 200, 300 o 400 */ font-size: 1.2rem;
+  font-weight: 400; /* prueba 200, 300 o 400 */ font-size: 3rem;
   color: #925c93;
   margin-bottom: 40px;
   text-align: left;

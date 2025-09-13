@@ -145,9 +145,10 @@
 }
 
 .card-title {
-        font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
   color: #925c93;
+
   font-weight: bold;
   margin-top: 4px; /* Espacio mínimo arriba */
   margin-bottom: 6px; /* Un poco de espacio para la lista */
@@ -155,8 +156,8 @@
 
 .card-description {
       font-family: 'Montserrat', sans-serif;
-  color: #555;
-  font-size: 1rem;
+  color: #666;
+  font-size: 14px;
   margin-bottom: 0px;
   line-height: 1.2;
 }

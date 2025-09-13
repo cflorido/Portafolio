@@ -53,7 +53,7 @@ function App() {
 </div>
         {/* Texto esquina inferior derecha */}
         <div className="corner-text-bottom">
-          Software <span className="highlight2">engineer</span><br />
+          Software engineer<br />
           Industrial <span className="highlight2">engineer</span>
         </div>
         

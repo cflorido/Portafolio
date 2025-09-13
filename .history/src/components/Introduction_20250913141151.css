@@ -36,16 +36,15 @@
 }
 
 .intro-content p {
-        font-family: 'Montserrat', sans-serif;
-font-size: 1.2rem;
-   color: #f0e6f7;
-
+  color: #f0e6f7;
+  font-size: 1.3rem;
   line-height: 1.8;
   font-weight: 400;
   margin: 0 20px;
 }
 
 .highlight {
-  color: #5c4b7d; 
- font-weight: 600;
+  color: #8566be; 
+  text-shadow: 0 0 8px #f7c1c1, 0 0 15px #9ce0db;
+  font-weight: 600;
 }

@@ -112,8 +112,9 @@ body::after {
   max-width: 1000px;
   margin: 0 auto;
 }
-.highlight2 {
+.highlight {
   color: #5c4b7d; 
+  text-shadow: 0 0 8px #f7c1c1, 0 0 5px #9c8cb9;
   font-weight: 600;
 }
 
