@@ -113,7 +113,7 @@ body::after {
   margin: 0 auto;
 }
 .highlight2 {
-  color: #463765; 
+  color: #5c4b7d; 
   font-weight: 600;
 }
 
@@ -124,7 +124,7 @@ body::after {
   left: 0px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
-  color: #925c93;
+  color: #a76ca7;
   font-weight: 600;
   z-index: 10;
 
@@ -139,7 +139,7 @@ body::after {
   right: 0px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
-  color: #925c93;
+  color: #a76ca7;
   font-weight: 600;
   z-index: 10;
 
@@ -162,7 +162,7 @@ body::after {
 .titulo-portafolio {
   font-family: 'Outfit', sans-serif;
   font-weight: 400; 
-  color: #925c93;
+  color: #a76ca7;
   font-size: 1rem;
   margin-bottom: 20px;
   line-height: 1.1;
@@ -177,7 +177,7 @@ body::after {
 }
 
 .subtitulo span {
-  color: #925c93;
+  color: #a76ca7;
   font-weight: bold;
 }
 
@@ -202,7 +202,7 @@ body::after {
   height: 320px;
   border-radius: 50%;
   padding: 8px;
-  background: linear-gradient(135deg, #925c93, #d94f70);
+  background: linear-gradient(135deg, #a76ca7, #d94f70);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -6,7 +6,7 @@
 .skills-title {
   font-family: 'Outfit', sans-serif;
   font-weight: 400; /* prueba 200, 300 o 400 */ font-size: 3rem;
-  color: #925c93;
+  color: #a76ca7;
   margin-bottom: 40px;
   text-align: left;
   margin-left: 2%;
@@ -34,7 +34,7 @@
 }
 
 .dot.active {
-  background-color: #925c93; /* morado principal */
+  background-color: #a76ca7; /* morado principal */
 }
 
 .dot:hover {
@@ -147,7 +147,7 @@
 .card-title {
         font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  color: #463765;
+  color: #a76ca7;
   font-weight: bold;
   margin-top: 4px; /* Espacio mínimo arriba */
   margin-bottom: 6px; /* Un poco de espacio para la lista */
@@ -262,7 +262,7 @@
   transform-origin: center center;
 }
 .card:not(.active):hover .card-icon {
-  color: #925c93; /* morado principal */
+  color: #a76ca7; /* morado principal */
   filter: drop-shadow(0 0 5px rgba(146, 92, 147, 0.7));
   transition: all 0.3s ease;
 }

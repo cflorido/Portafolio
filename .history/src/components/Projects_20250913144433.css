@@ -32,7 +32,7 @@
   box-shadow: 0px 5px 15px rgba(146, 92, 147, 0.25);
   cursor: pointer;
   font-weight: 500;
-  color: #925c93;
+  color: #a76ca7;
   transition: all 0.3s ease;
     height: 70px; /* Todas iguales */
       min-height: 70px;
@@ -48,7 +48,7 @@
 }
 
 .menu-item.activo {
-  background: linear-gradient(135deg, #925c93);
+  background: linear-gradient(135deg, #a76ca7);
   color: #fff;
   font-weight: 600;
   box-shadow: 0px 8px 20px rgba(146, 92, 147, 0.35);
@@ -75,7 +75,7 @@
 
 .project-detail h2 {
           font-family: 'Montserrat', sans-serif;
-  color: #925c93;
+  color: #a76ca7;
   margin-bottom: 20px;
   font-size: 1.2rem;
 }
@@ -89,7 +89,7 @@ html, body {
   font-family: 'Outfit', sans-serif;
   font-weight: 400; /* prueba 200, 300 o 400 */ 
   font-size: 3rem;
-  color: #925c93;
+  color: #a76ca7;
   margin-bottom: 40px;
   text-align: left;
   margin-left: 12%;
@@ -118,7 +118,7 @@ html, body {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 20px;
-  background: linear-gradient(135deg, #925c93);
+  background: linear-gradient(135deg, #a76ca7);
   color: white;
   border-radius: 8px;
   font-weight: 600;
@@ -127,7 +127,7 @@ html, body {
 }
 
 .project-detail a:hover {
-  background: linear-gradient(135deg, #925c93);
+  background: linear-gradient(135deg, #a76ca7);
   transform: translateY(-2px);
 }
 

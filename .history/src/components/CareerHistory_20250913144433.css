@@ -12,7 +12,7 @@ html, body {
 .career-title {
   font-family: 'Outfit', sans-serif;
   font-weight: 400; /* prueba 200, 300 o 400 */ font-size: 3rem;
-  color: #925c93;
+  color: #a76ca7;
   margin-bottom: 40px;
   text-align: left;
 }
@@ -21,7 +21,7 @@ html, body {
   position: relative;
   margin-left: 30px;
   padding-left: 20px;
-  border-left: 3px solid #925c93;
+  border-left: 3px solid #a76ca7;
 }
 
 .timeline-item {
@@ -45,7 +45,7 @@ html, body {
   top: 8px;
   width: 20px;
   height: 20px;
-  background: #925c93;
+  background: #a76ca7;
   border-radius: 50%;
   border: 4px solid #faf8ec;
 }
@@ -53,7 +53,7 @@ html, body {
 .timeline-date {
         font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  color: #925c93;
+  color: #a76ca7;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
@@ -68,7 +68,7 @@ html, body {
 .job-title {
         font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  color: #463765;
+  color: #a76ca7;
   margin-bottom: 5px;
 }
 
