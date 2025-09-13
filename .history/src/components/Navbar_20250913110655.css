@@ -1,0 +1,82 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(146, 92, 147, 0.15);
+}
+
+.nav-logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #925c93;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4e3b61;
+  font-weight: 400;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #d94f70;
+  transform: translateY(-2px);
+}
+
+/* Hamburguesa */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #925c93;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    background: #faf8ec;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    transform: translateY(-200%);
+    transition: transform 0.4s ease;
+    box-shadow: 0 5px 20px rgba(146, 92, 147, 0.15);
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}

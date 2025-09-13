@@ -1,0 +1,20 @@
+.introduction {
+  background-color: #6a0dad; /* morado */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px; /* espacio interno */
+  min-height: 60vh; /* altura visualmente amplia */
+}
+
+.intro-content {
+  max-width: 900px; /* no se expande demasiado */
+}
+
+.descripcion {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  font-weight: 400;
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+.projects-container {
+  display: flex;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 10px 200px;
+  gap: 70px;
+  font-family: 'Montserrat', sans-serif;
+  color: #4e3b61;
+   margin-bottom: 5%;
+}
+
+/* Menú lateral */
+.projects-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu-item {
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0px 5px 15px rgba(146, 92, 147, 0.25);
+  cursor: pointer;
+  font-weight: 500;
+  color: #925c93;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background: #f5e9f9;
+  transform: translateX(5px);
+}
+
+.menu-item.activo {
+  background: linear-gradient(135deg, #925c93, #d94f70);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0px 8px 20px rgba(146, 92, 147, 0.35);
+}
+
+/* Detalles del proyecto */
+.project-detail {
+  flex: 2;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0px 8px 20px rgba(146, 92, 147, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-detail:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 12px 25px rgba(146, 92, 147, 0.3);
+}
+
+.project-detail h2 {
+  color: #925c93;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.skills-title {
+    display: flex;
+  max-width: 1240px;
+  margin: 0 auto;
+  margin-top: 5%;
+ 
+  padding: 10px 0px;
+    font-family: 'MiFuentePersonalizada';
+  font-size: 3rem;
+  color: #925c93;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.project-detail img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 15px rgba(146, 92, 147, 0.2);
+}
+
+.project-detail p {
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.project-detail strong {
+  color: #4e3b61;
+}
+
+.project-detail a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #925c93, #d94f70);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-detail a:hover {
+  background: linear-gradient(135deg, #7a4a7a, #b83c5b);
+  transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .projects-container {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .projects-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu-item {
+    flex: 1 1 40%;
+    text-align: center;
+  }
+}
