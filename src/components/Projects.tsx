@@ -60,7 +60,7 @@ const Projects = ({ id }: { id?: string }) => {
           rel="noopener noreferrer" 
           className="github-link"
         >
-          Ver en GitHub
+          GitHub
         </a>
       </div>
     </div>

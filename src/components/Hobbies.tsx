@@ -149,7 +149,7 @@ if (sectionRef.current) {
   {/* Texto esquina inferior derecha */}
   <div className="corner-text-bottom-hobbies">
     Now you know<br /> 
-     me a little better
+     me a little bit better
   </div>
       {/* Contenido */}
 

@@ -13,20 +13,13 @@ function Footer() {
         </p>
         <div className="footer-links">
           <a
-            href="https://github.com/tuUsuario"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/tuUsuario/"
+            href="https://www.linkedin.com/in/carol-florido-a22202327/"
             target="_blank"
             rel="noopener noreferrer"
           >
             LinkedIn
           </a>
-          <a href="mailto:tuemail@gmail.com">Email</a>
+          <a href="mailto:carolsofiafloridocastro@gmail.com">Email</a>
         </div>
       </div>
     </footer>

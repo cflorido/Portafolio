@@ -11,13 +11,16 @@ import Hobbies from './components/Hobbies';
 function App() {
   const [_showHeader, setShowHeader] = useState(false);
   const [_imagenActual, setImagenActual] = useState("/ilustracion.png");
-  
+  const [showScrollButton, setShowScrollButton] = useState(false);
+     
   // 👇 Nuevo estado para el logo
   const [logoActual, setLogoActual] = useState("/logo_1.png");
 
   useEffect(() => {
     const handleScroll = () => {
       setShowHeader(window.scrollY > 100);
+      // Mostrar botón cuando el usuario haya hecho scroll hacia abajo
+      setShowScrollButton(window.scrollY > 300);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -43,21 +46,30 @@ function App() {
     return () => clearInterval(intervaloLogo);
   }, []);
 
+  // Función para scroll hacia arriba
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <>
       <Navbar />
       <div className="portfolio-container">
         {/* Texto esquina superior izquierda */}
-<div className="corner-text-top">
-  <span className="hello">Hello!</span> <br />
-  My name is <span className="highlight2">Carol</span>
-</div>
+        <div className="corner-text-top">
+          <span className="hello">Hello!</span> <br />
+          My name is <span className="highlight2">Carol</span>
+        </div>
+
         {/* Texto esquina inferior derecha */}
         <div className="corner-text-bottom">
           Software <span className="highlight2">engineer</span><br />
           Industrial <span className="highlight2">engineer</span>
         </div>
-        
+                
         <div className="portfolio-circle">
           <svg viewBox="0 0 350 250" className="portfolio-text-svg">
             <path
@@ -75,29 +87,53 @@ function App() {
           <img src={logoActual} alt="Logo" />
         </div>
       </div>
+
+      <Introduction id="about" />
+      <section id="career" className="skills-section">
+        <div className="bolas">
+          <span></span>
+          <span></span>
+        </div>
+        <CareerHistory />
+      </section>
+
+      <section id="skills" className="skills-section">
+        <div className="bolas">
+          <span></span>
+          <span></span>
+        </div>
+        <Skills />
+      </section>
+
+      <Hobbies id="hobbies" />
+      <Projects id="projects" />
+      <Footer/>
+
+      {/* Botón Scroll to Top */}
+      {showScrollButton && (
+        <button 
+          className="scroll-to-top-btn" 
+          onClick={scrollToTop}
+          aria-label="Volver arriba"
+        >
+          <svg 
+            width="24" 
+            height="24" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              d="M7 14L12 9L17 14" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+      )}
       
-<Introduction id="about" />
-
-<section id="career" className="skills-section">
-  <div className="bolas">
-    <span></span>
-    <span></span>
-  </div>
-  <CareerHistory />
-</section>
-
-<section id="skills" className="skills-section">
-  <div className="bolas">
-    <span></span>
-    <span></span>
-  </div>
-  <Skills />
-</section>
-
-<Hobbies id="hobbies" />
-<Projects id="projects" />
-<Footer/>
-
     </>
   );
 }
