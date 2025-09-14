@@ -1,0 +1,76 @@
+.hobbies {
+  position: relative;
+  min-height: 50vh;
+  overflow: hidden;
+  border-radius: 20px;
+  z-index: 1;
+  background-color: #463765; /* 👈 Aquí puedes poner el color que quieras */
+}
+
+.trail-container-hobbies {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  pointer-events: none;
+}
+
+.trail-background {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.5s ease;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.intro-content p {
+        font-family: 'Montserrat', sans-serif;
+font-size: 1.2rem;
+   color: #f0e6f7;
+
+  line-height: 1.8;
+  font-weight: 400;
+  margin: 0 20px;
+}
+
+.highlight {
+  color: #463765; 
+ font-weight: 600;
+}
+.hobbies-circles {
+  display: flex;
+  justify-content: space-around; /* 👈 distribuye uniformemente */
+  align-items: center;
+  width: 100%; /* ocupa todo el ancho disponible */
+  max-width: 800px; /* opcional: limita el ancho máximo */
+  margin: 30px auto 0; /* centra el contenedor horizontalmente */
+  flex-wrap: wrap; /* baja a otra línea si no cabe */
+  gap: 20px; /* espacio mínimo entre círculos */
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #dcc5e2; /* color del círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #463765; /* color del icono */
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.circle:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}

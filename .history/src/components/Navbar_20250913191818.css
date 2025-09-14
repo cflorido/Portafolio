@@ -1,0 +1,110 @@
+/* General Navbar */
+.navbar {
+  width: 100%;
+  background: linear-gradient(to bottom, #925c93, #463765);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.2rem 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 55px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Links */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: #f7eafc;
+  font-weight: 300;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffdde9;
+  transform: translateY(-2px);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #faf8ec;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(to right, #925c93, #b97ab8);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .navbar-links.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

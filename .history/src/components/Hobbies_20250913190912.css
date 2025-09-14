@@ -1,0 +1,260 @@
+.hobbies {
+  position: relative;
+  min-height: 55vh;
+  overflow: hidden;
+  border-radius: 20px;
+  z-index: 1;
+  background-color: #463765;
+  display: flex; /* 👈 Agregamos flexbox */
+  align-items: center; /* 👈 Centra verticalmente */
+  justify-content: center; /* 👈 Centra horizontalmente */
+  
+}
+
+
+.trail-container-hobbies {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  pointer-events: none;
+}
+
+.trail-background {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.5s ease;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  width: 100%; /* 👈 Asegura que ocupe el ancho completo */
+  display: flex; /* 👈 Flexbox para centrar el contenido interno */
+  justify-content: center; /* 👈 Centra horizontalmente */
+  align-items: center; /* 👈 Centra verticalmente */
+}
+
+
+.highlight {
+  color: #463765;
+  font-weight: 600;
+}
+
+.hobbies-circles {
+  display: flex;
+  justify-content: center; /* centra todo el grupo */
+  gap: 80px; /* espacio uniforme entre los círculos */
+  width: 100%; /* ocupa todo el ancho disponible */
+  flex-wrap: nowrap; /* mantiene todos los iconos en la misma línea */
+  align-items: center; /* centra verticalmente los círculos */
+}
+
+.circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  background-color: #faf8ec; /* color del círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #925c93; /* color del icono */
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.hobby-name-svg {
+  width: 190px;   /* igual que el círculo */
+  height: 50px;   /* ajusta según lo que necesites */
+  overflow: visible;
+}
+
+.hobby-name-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  fill: #f0e6f7;  /* color del texto */
+}
+
+.circle:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+}
+
+.hobby-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400; /* prueba 200, 300 o 400 */ font-size: 3rem;
+  color: #f0e6f7;
+
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+.hobbies {
+  position: relative;
+
+  overflow: hidden;
+  border-radius: 24px;
+  background: linear-gradient(to bottom right, #463765);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trail-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  pointer-events: none;
+}
+
+.trail-background {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.5s ease;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1536px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hobbies-circles {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -50px; /* Sin espacio entre texto y círculo */
+  transition: transform 0.3s ease;
+}
+
+.hobby-item:hover {
+  transform: scale(1.1);
+}
+
+/* SVG para texto curvado */
+.hobby-name-svg {
+  width: 180px;
+  height: 25px;
+  overflow: visible;
+  margin-bottom: 0px; /* Equivalente a -mb-4 */
+  transition: transform 0.3s ease;
+}
+
+.hobby-item:hover .hobby-name-svg {
+  transform: scale(1.1);
+}
+
+.hobby-name-text {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600;
+  fill: #f9f7eb; /* purple-100 */
+}
+
+.circle {
+  width: 128px; /* w-32 */
+  height: 128px; /* h-32 */
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #925c93); /* purple-100 to purple-200 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #f9f7eb; /* purple-600 */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-xl */
+  transition: all 0.3s ease;
+}
+
+.hobby-item:hover .circle {
+  transform: scale(1.1) translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* shadow-2xl */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hobbies-circles {
+    gap: 40px;
+    flex-direction: column;
+  }
+  
+  .hobby-name-svg {
+    width: 160px;
+    height: 22px;
+  }
+  
+  .hobby-name-text {
+    font-size: 1rem;
+  }
+  
+  .circle {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+  }
+}
+
+.corner-text-top-hobbies {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #f9f7eb;
+  font-weight: 500;
+  z-index: 20;
+    margin: 0 5%;
+}
+
+.corner-text-bottom-hobbies {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #f9f7eb;
+  font-weight: 500;
+  text-align: right;
+    margin: 0 5%;
+  z-index: 20;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .corner-text-top-hobbies {
+    font-size: 0.9rem;
+  }
+
+  .corner-text-bottom-hobbies {
+    font-size: 0.9rem;
+  }
+}
