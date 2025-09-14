@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
       <div className="navbar-container">
         {/* Logo */}
         <a href="/" className="navbar-logo">
-          <img src="/logo.png" alt="Logo" />
+          <img src="https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/logo.png" alt="Logo" />
         </a>
 
         {/* Toggle Menu (Mobile) */}

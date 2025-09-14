@@ -9,7 +9,7 @@ const Projects = ({ id }: { id?: string }) => {
       "descripcion": "A sleek and responsive portfolio website designed to highlight my professional experience, showcase key projects, and provide easy access to contact information in a clean and user-friendly layout.",
       "tecnologias": "Vite, React, TypeScript, CSS",
       "github": "https://github.com/cflorido/Portafolio",
-      "imagen": "public/Portafolio.png"
+      "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/Portafolio.png"
     }
     ,
     {
@@ -18,7 +18,7 @@ const Projects = ({ id }: { id?: string }) => {
       "descripcion": "An experimental project applying differential privacy algorithms to mobility trajectories, generating metrics like origin-destination matrices and heatmaps using real Beijing datasets.",
       "tecnologias": "Python, Jupyter Notebook, NumPy, Matplotlib, Folium",
       "github": "https://github.com/cflorido/Differential-Privacy-Mechanisms-for-Trajectories.git",
-      "imagen": "public/Privacidad.png"
+      "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/Privacidad.png"
     },
   ];
 

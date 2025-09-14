@@ -37,7 +37,7 @@ function App() {
   useEffect(() => {
     const intervaloLogo = setInterval(() => {
       setLogoActual((prev) =>
-        prev === "/logo_1.png" ? "/logo_2.png" : "/logo_1.png"
+        prev === "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/logo_1.png" ? "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/logo_2.png" : "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/logo_1.png"
       );
     }, 1000);
     return () => clearInterval(intervaloLogo);
@@ -67,7 +67,7 @@ function App() {
             />
             <text className="portfolio-text">
               <textPath href="#topArc" startOffset="50%" textAnchor="middle">
-                PORTAFOLIO
+                PORTFOLIO
               </textPath>
             </text>
           </svg>
