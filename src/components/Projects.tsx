@@ -27,7 +27,16 @@ const Projects = ({ id }: { id?: string }) => {
     "tecnologias": "Python, Scikit-learn, Pandas, NumPy, TF-IDF, SMOTE",
     "github": "https://github.com/cflorido/Proyecto1_B1",
     "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/text_analytics.png"
-  }
+  }, 
+  {
+  "id": 4,
+  "nombre": "Banking Products Analysis",
+  "descripcion": "A comprehensive project analyzing customer behavior and predicting subscription to term deposits (CDTs) using data cleaning, exploratory analysis, and machine learning models. The project includes visualization dashboards, predictive modeling with neural networks and Random Forest, threshold optimization to maximize expected bank revenue, and deployment on AWS.",
+  "tecnologias": "Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, SMOTEENN, Dash, AWS",
+  "github": "https://github.com/cflorido/Proyecto_2_Analitica",
+  "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/BankingProducts.png"
+}
+
   ];
 
   const [seleccionado, setSeleccionado] = useState(proyectos[0]);
