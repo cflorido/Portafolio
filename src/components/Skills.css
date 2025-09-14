@@ -255,8 +255,8 @@
   box-shadow: 0 10px 25px rgba(146, 92, 147, 0.4);
   cursor: pointer;
   position: relative;
-  z-index: 5;
-  /* quita el transform: scale(...) */
+  z-index: 9999;
+
 }
 
 
@@ -265,7 +265,7 @@
 }
 .card:not(.active):hover .card-icon {
   color: #925c93; /* morado principal */
-  filter: drop-shadow(0 0 5px rgba(146, 92, 147, 0.7));
-  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 8px rgba(146, 92, 147, 0.7));
+  z-index: 9999;
 }
 

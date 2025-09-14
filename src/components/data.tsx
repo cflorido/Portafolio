@@ -6,22 +6,18 @@ const Data: React.FC = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Arrays para la animación
   const ages = Array.from({ length: 22 }, (_, i) => i.toString().padStart(2, '0'));
   const nationalities = ['American', 'Brazilian', 'Mexican', 'Argentine', 'Chilean', 'Peruvian', 'Venezuelan', 'Colombian'];
   const englishLevels = ['Basic', 'Pre-Intermediate', 'Intermediate', 'Upper Intermediate'];
 
-  // Estados para los valores actuales durante la animación
   const [_currentAge, _setCurrentAge] = useState('21');
   const [_currentNationality, _setCurrentNationality] = useState('Colombian');
   const [_currentLevel, _setCurrentLevel] = useState('Upper Intermediate');
 
-  // Estados para controlar la animación de cada slot
   const [ageSlotPosition, setAgeSlotPosition] = useState(0);
   const [nationalitySlotPosition, setNationalitySlotPosition] = useState(0);
   const [levelSlotPosition, setLevelSlotPosition] = useState(0);
 
-  // Intersection Observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -47,9 +43,8 @@ const Data: React.FC = () => {
     duration: number
   ) => {
     const finalIndex = items.indexOf(finalValue);
-    // Agregamos múltiples copias del array para simular el rollo continuo
     const extendedItems = [...items, ...items, ...items, ...items, ...items];
-    const finalPosition = (extendedItems.length - items.length + finalIndex) * -70; // -70px por cada item
+    const finalPosition = (extendedItems.length - items.length + finalIndex) * -70;
     
     let startTime: number;
     let startPosition = 0;
@@ -60,7 +55,6 @@ const Data: React.FC = () => {
       const progress = elapsed / duration;
 
       if (progress < 1) {
-        // Función de easing que empieza rápido y desacelera (ease-out cuadrática)
         const easeOut = 1 - Math.pow(1 - progress, 3);
         const currentPosition = startPosition + (finalPosition - startPosition) * easeOut;
         setPosition(currentPosition);
@@ -76,7 +70,6 @@ const Data: React.FC = () => {
   const startSlotMachineAnimation = () => {
     setIsAnimating(true);
 
-    // Iniciar animaciones con diferentes duraciones para que terminen en momentos diferentes
     createSlotMachineAnimation(ages, '21', setAgeSlotPosition, 2000);
     
     setTimeout(() => {
@@ -87,14 +80,12 @@ const Data: React.FC = () => {
       createSlotMachineAnimation(englishLevels, 'Upper Intermediate', setLevelSlotPosition, 3000);
     }, 600);
 
-    // Terminar la animación
     setTimeout(() => {
       setIsAnimating(false);
     }, 3500);
   };
 
   const renderSlotItems = (items: string[], position: number, suffix: string = '') => {
-    // Crear múltiples copias para el efecto de rollo continuo
     const extendedItems = [...items, ...items, ...items, ...items, ...items];
     
     return (
@@ -115,28 +106,55 @@ const Data: React.FC = () => {
   };
 
   return (
-    <div className="data-container" ref={containerRef}>
-      <div className="data-item">
-        <h3 className="data-label">My Age</h3>
-        <div className="data-value-container slot-container">
-          {renderSlotItems(ages, ageSlotPosition, ' years old')}
+    <>
+      {/* SVG con ondas mejoradas en parte superior e inferior */}
+      <svg width="0" height="0">
+        <defs>
+          <clipPath id="wavy-clip" clipPathUnits="objectBoundingBox">
+            <path d="M0,0.08 
+                     C0.1,0.02 0.1,0.14 0.2,0.08
+                     C0.3,0.02 0.3,0.14 0.4,0.08
+                     C0.5,0.02 0.5,0.14 0.6,0.08
+                     C0.7,0.02 0.7,0.14 0.8,0.08
+                     C0.9,0.02 0.9,0.14 1,0.08
+                     V0.92
+                     C0.9,0.98 0.9,0.86 0.8,0.92
+                     C0.7,0.98 0.7,0.86 0.6,0.92
+                     C0.5,0.98 0.5,0.86 0.4,0.92
+                     C0.3,0.98 0.3,0.86 0.2,0.92
+                     C0.1,0.98 0.1,0.86 0,0.92
+                     Z" />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <div className="Maindata-container" ref={containerRef}>
+        <div className="data-container">
+
+
+          <div className="data-item">
+            <h3 className="data-label">My Age</h3>
+            <div className="data-value-container slot-container">
+              {renderSlotItems(ages, ageSlotPosition, ' years old')}
+            </div>
+          </div>
+                
+          <div className="data-item">
+            <h3 className="data-label">My nationality</h3>
+            <div className="data-value-container slot-container">
+              {renderSlotItems(nationalities, nationalitySlotPosition)}
+            </div>
+          </div>
+                
+          <div className="data-item">
+            <h3 className="data-label">My English Level</h3>
+            <div className="data-value-container slot-container">
+              {renderSlotItems(englishLevels, levelSlotPosition)}
+            </div>
+          </div>
         </div>
       </div>
-            
-      <div className="data-item">
-        <h3 className="data-label">My nationality</h3>
-        <div className="data-value-container slot-container">
-          {renderSlotItems(nationalities, nationalitySlotPosition)}
-        </div>
-      </div>
-            
-      <div className="data-item">
-        <h3 className="data-label">My English Level</h3>
-        <div className="data-value-container slot-container">
-          {renderSlotItems(englishLevels, levelSlotPosition)}
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

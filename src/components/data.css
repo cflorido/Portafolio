@@ -3,11 +3,41 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 40px;
-  max-width: 83%;
+  max-width: 80%;
   margin: 50px auto;
   font-family: 'Montserrat', sans-serif;
   width: 100%;
-      margin-bottom: 7%;
+}
+
+.corner-text-bottom-hobbies {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #f0e6f7;
+  font-weight: 500;
+  text-align: right;
+  margin: 0 5%;
+  z-index: 20;
+}
+
+.Maindata-container {
+
+
+  height: 390px;
+  display: flex;
+  position: relative;
+  border-radius: 0;
+  /* Nuevo clip-path con ondas más pronunciadas arriba y abajo */
+  clip-path: url(#wavy-clip);
+  background-color: #925c93;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .data-item {
@@ -16,13 +46,11 @@
 }
 
 .data-label {
-
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #925c93;
+  color: #f0e6f7;
   text-transform: uppercase;
-
 }
 
 .data-value-container {
@@ -40,7 +68,7 @@
 
 .data-value-container:hover {
   transform: translateY(-3px);
-  box-shadow: 0px 15px 35px #925c93;
+  box-shadow: 0px 10px 25px rgba(146, 92, 147, 0.7);
 }
 
 /* Estilos específicos para el slot machine */
@@ -73,7 +101,6 @@
   letter-spacing: 0.5px;
   white-space: nowrap;
   box-sizing: border-box;
-  
 }
 
 /* Efecto de brillo durante la animación */
@@ -106,7 +133,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-
   pointer-events: none;
   border-radius: 25px;
   z-index: 1;
@@ -157,6 +183,32 @@
   }
     
   .data-label {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+.corner-text-bottom-hobbies {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #f0e6f7;
+  font-weight: 500;
+  text-align: right;
+  margin: 0 5%;
+  z-index: 20;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .corner-text-top-hobbies {
+    font-size: 0.9rem;
+  }
+
+  .corner-text-bottom-hobbies {
     font-size: 0.9rem;
   }
 }
