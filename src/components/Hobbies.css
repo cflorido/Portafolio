@@ -8,7 +8,8 @@
   display: flex; /* 👈 Agregamos flexbox */
   align-items: center; /* 👈 Centra verticalmente */
   justify-content: center; /* 👈 Centra horizontalmente */
-  
+  margin-top: 10%;
+    margin-bottom: 8%;
 }
 
 

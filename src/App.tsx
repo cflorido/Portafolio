@@ -15,7 +15,7 @@ function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
      
   // 👇 Nuevo estado para el logo
-  const [logoActual, setLogoActual] = useState("https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/logo_1.pngg");
+  const [logoActual, setLogoActual] = useState("https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/logo_1.png");
 
   useEffect(() => {
     const handleScroll = () => {

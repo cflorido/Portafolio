@@ -43,7 +43,7 @@ const Projects = ({ id }: { id?: string }) => {
 
  return (
   <section id={id}>
-    <h2 className="projects-title">Projects</h2>
+    <h2 className="projects-title">Portfolio highlights</h2>
     <div className="projects-container">
       {/* Menú de proyectos */}
       <div className="projects-menu">

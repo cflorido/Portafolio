@@ -124,7 +124,7 @@ onClick={() => {
 
   return (
     <div className="skills-section">
-      <h2 className="skills-title">Skills</h2>
+      <h2 className="skills-title">Highlights of my skills</h2>
 
       {<CardsCarousel />}
 

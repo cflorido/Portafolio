@@ -12,9 +12,9 @@ const Data: React.FC = () => {
   const englishLevels = ['Basic', 'Pre-Intermediate', 'Intermediate', 'Upper Intermediate'];
 
   // Estados para los valores actuales durante la animación
-  const [currentAge, setCurrentAge] = useState('21');
-  const [currentNationality, setCurrentNationality] = useState('Colombian');
-  const [currentLevel, setCurrentLevel] = useState('Upper Intermediate');
+  const [_currentAge, _setCurrentAge] = useState('21');
+  const [_currentNationality, _setCurrentNationality] = useState('Colombian');
+  const [_currentLevel, _setCurrentLevel] = useState('Upper Intermediate');
 
   // Estados para controlar la animación de cada slot
   const [ageSlotPosition, setAgeSlotPosition] = useState(0);
