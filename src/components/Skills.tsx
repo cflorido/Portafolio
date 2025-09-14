@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, type ReactNode } from 'react';
 import { FaCode, FaReact, FaDatabase, FaCogs, FaChartBar, FaGlobe } from "react-icons/fa"; 
 import './Skills.css';
 
 interface SkillCategory {
   id: number;
   name: string;
-  icon: JSX.Element; // ahora es un componente de ícono
+  icon: ReactNode; // ahora es un componente de ícono
   color: string;
   skills: string[];
 }

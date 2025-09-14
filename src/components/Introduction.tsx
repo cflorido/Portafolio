@@ -41,12 +41,18 @@ const Introduction = ({ id: _id }: { id?: string }) => {
   };
 
   const handleMouseEnter = (e: React.MouseEvent) => {
-    setIsHovering(true);
+  setIsHovering(true);
+
+  if (sectionRef.current) {
     const rect = sectionRef.current.getBoundingClientRect();
     lastPositionRef.current = {
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
     };
+  
+  createTrailPoint(lastPositionRef.current.x, lastPositionRef.current.y);
+};
+
     createTrailPoint(lastPositionRef.current.x, lastPositionRef.current.y);
   };
 
