@@ -1,0 +1,161 @@
+.data-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  max-width: 83%;
+  margin: 50px auto;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+.data-item {
+  text-align: center;
+  min-width: 180px;
+}
+
+.data-label {
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #925c93;
+  text-transform: uppercase;
+
+}
+
+.data-value-container {
+  position: relative;
+  border-radius: 25px;
+  background: linear-gradient(135deg,#463765);
+  box-shadow: 0px 10px 25px rgba(146, 92, 147, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 85px;
+  min-width: 285px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.data-value-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 15px 35px #925c93;
+}
+
+/* Estilos específicos para el slot machine */
+.slot-container {
+  overflow: hidden;
+  height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot-reel {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  transition: transform 0.1s ease-out;
+}
+
+.slot-item {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  padding: 0 25px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  
+}
+
+/* Efecto de brillo durante la animación */
+.slot-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slot-container.animating::before {
+  animation: shine 0.8s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Sombras internas para simular profundidad de la tragamonedas */
+.slot-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  pointer-events: none;
+  border-radius: 25px;
+  z-index: 1;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .data-container {
+    padding: 40px 20px;
+  }
+    
+  .data-item {
+    width: 200px;
+  }
+    
+  .data-value-container,
+  .slot-container {
+    width: 200px;
+    height: 75px;
+  }
+
+  .slot-item {
+    height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .data-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 15px;
+    max-width: 90%;
+  }
+    
+  .data-item {
+    width: 250px;
+  }
+    
+  .data-value-container,
+  .slot-container {
+    width: 250px;
+    height: 70px;
+  }
+
+  .slot-item {
+    height: 70px;
+    font-size: 1.1rem;
+  }
+    
+  .data-label {
+    font-size: 0.9rem;
+  }
+}

@@ -62,12 +62,7 @@
   overflow: visible;
 }
 
-.hobby-name-text {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
-  fill: #f0e6f7;  /* color del texto */
-}
+
 
 .circle:hover {
   transform: translateY(-5px) scale(1.1);
@@ -167,6 +162,7 @@
   font-size: 1.25rem; /* text-xl */
   font-weight: 600;
   fill: #f0e6f7; /* purple-100 */
+font-family: 'Montserrat', sans-serif;
 }
 
 .circle {
@@ -199,10 +195,7 @@
     width: 160px;
     height: 22px;
   }
-  
-  .hobby-name-text {
-    font-size: 1rem;
-  }
+
   
   .circle {
     width: 100px;

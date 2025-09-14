@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Introduction from './components/Introduction';
 import Hobbies from './components/Hobbies';
+import Data from './components/Data';
 
 function App() {
   const [_showHeader, setShowHeader] = useState(false);
@@ -14,7 +15,7 @@ function App() {
   const [showScrollButton, setShowScrollButton] = useState(false);
      
   // 👇 Nuevo estado para el logo
-  const [logoActual, setLogoActual] = useState("/logo_1.png");
+  const [logoActual, setLogoActual] = useState("https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/logo_1.pngg");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -96,7 +97,7 @@ function App() {
         </div>
         <CareerHistory />
       </section>
-
+      <Data />
       <section id="skills" className="skills-section">
         <div className="bolas">
           <span></span>
