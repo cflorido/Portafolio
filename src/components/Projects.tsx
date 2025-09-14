@@ -20,6 +20,14 @@ const Projects = ({ id }: { id?: string }) => {
       "github": "https://github.com/cflorido/Differential-Privacy-Mechanisms-for-Trajectories.git",
       "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/Privacidad.png"
     },
+      {
+    "id": 3,
+    "nombre": "Text Analytics for Political Fake News Detection",
+    "descripcion": "A collaborative project focused on detecting political fake news using text analytics and multiple machine learning models, including Naive Bayes, Random Forest, KNN, and Gradient Boosting. The system analyzes textual patterns to identify misinformation, optimizing detection with metrics like F1-score and ROC AUC.",
+    "tecnologias": "Python, Scikit-learn, Pandas, NumPy, TF-IDF, SMOTE",
+    "github": "https://github.com/cflorido/Proyecto1_B1",
+    "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/text_analytics.png"
+  }
   ];
 
   const [seleccionado, setSeleccionado] = useState(proyectos[0]);
@@ -45,7 +53,7 @@ const Projects = ({ id }: { id?: string }) => {
       <div className="project-detail">
         <img src={seleccionado.imagen} alt={seleccionado.nombre} />
         <p>{seleccionado.descripcion}</p>
-        <p><strong>Tecnologías:</strong> {seleccionado.tecnologias}</p>
+        <p><strong>Technologies:</strong> {seleccionado.tecnologias}</p>
         <a 
           href={seleccionado.github} 
           target="_blank" 
