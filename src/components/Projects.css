@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
-.projects-container {
+.projects-container-projects {
   display: flex;
   max-width: 80%;
   margin: 0 auto;
@@ -10,7 +10,7 @@
   margin-bottom: 5%;
 }
 
-.github-link {
+.github-link-projects {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   text-decoration: none;
@@ -18,7 +18,7 @@
 }
 
 /* Menú lateral */
-.projects-menu {
+.projects-menu-projects {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
 }
 
 /* 🔹 Menu items con borde gradiente */
-.menu-item {
+.menu-item-projects {
   padding: 15px 20px;
   border-radius: 12px;
   background: #ffffff;
@@ -49,7 +49,7 @@
 }
 
 /* 🔹 Pseudo-elemento para borde gradiente en menu items */
-.menu-item::before {
+.menu-item-projects::before {
   content: '';
   position: absolute;
   top: 0;
@@ -71,38 +71,43 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
-  opacity: 0;
+  opacity: 0; /* 🔹 Por defecto oculto */
   transition: opacity 0.3s ease;
   z-index: -1;
 }
 
-.menu-item:hover {
+.menu-item-projects:hover {
   background: #ffffff;
   transform: translateX(5px);
 }
 
-/* 🔹 Mostrar borde gradiente al hacer hover */
-.menu-item:hover::before {
-  opacity: 1;
-}
-
-.menu-item.activo {
-  background: linear-gradient(135deg, #7591be);
-  color: #fff;
+/* 🔹 ARREGLADO: Borde gradiente SIEMPRE visible para item activo */
+.menu-item-projects.activo-projects {
+  background: #ffffff; /* 🔹 Cambiado: fondo blanco en lugar del gradiente */
+  color: #7591be; /* 🔹 Cambiado: texto en color del tema */
   font-weight: 600;
-
 }
 
-/* 🔹 Borde gradiente para item activo */
-.menu-item.activo::before {
-  opacity: 1;
+/* 🔹 ARREGLADO: Item activo SIEMPRE muestra el borde gradiente */
+.menu-item-projects.activo-projects::before {
+  opacity: 1; /* 🔹 SIEMPRE VISIBLE cuando está activo */
 }
 
-/* 🔹 Detalles del proyecto con borde gradiente */
-.project-detail {
+/* 🔹 Mostrar borde gradiente al hacer hover SOLO en items NO activos */
+.menu-item-projects:not(.activo-projects):hover::before {
+  opacity: 0.7; /* 🔹 Sutil en hover */
+}
+
+/* 🔹 Detalles del proyecto con línea gradiente superior */
+.project-detail-projects {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
+  width: 530px;
   min-width: 530px;
+  max-width: 530px;
+  height: 650px;
+  min-height: 650px;
+  max-height: 650px;
   flex: 2;
   background: #ffffff;
   border-radius: 16px;
@@ -110,22 +115,19 @@
   box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  
-  /* 🔹 Preparar para borde gradiente */
-  border: 3px solid transparent;
-  background-clip: padding-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-/* 🔹 Pseudo-elemento para borde gradiente en project detail */
-.project-detail::before {
+/* 🔹 Línea gradiente superior (como card-top de Skills) */
+.project-detail-projects::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  border-radius: 16px;
-  padding: 3px;
+  height: 4px;
   background: linear-gradient(
     135deg,
     #738fbd 0%,
@@ -134,26 +136,21 @@
     #db88a4 80%,
     #cc8eb1 100%
   );
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  opacity: 1; /* 🔹 SIEMPRE VISIBLE */
-  z-index: -1;
+  border-radius: 16px 16px 0 0;
 }
 
-.project-detail:hover {
+.project-detail-projects:hover {
   font-size: 1.2rem;
   transform: scale(1.02);
   box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
 }
 
-.project-detail h2 {
+.project-detail-projects h2 {
   font-family: 'Montserrat', sans-serif;
   color: #444;
   margin-bottom: 20px;
   font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 html, body {
@@ -163,7 +160,7 @@ html, body {
   background-color: #fff;
 }
 
-.projects-title {
+.projects-title-projects {
   font-family: 'Outfit', sans-serif;
   font-weight: 600;
   font-size: 2.9rem;
@@ -174,14 +171,24 @@ html, body {
   letter-spacing: 4px;
 }
 
-.project-detail img {
+.project-detail-projects img {
   width: 100%;
-  max-width: 500px;
+  height: 200px;
+  max-width: 450px;
+  object-fit: cover;
   border-radius: 14px;
   margin-bottom: 20px;
+  flex-shrink: 0;
 }
 
-.project-detail p {
+/* Contenedor para el contenido con scroll */
+.project-content-projects {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.project-detail-projects p {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   margin: 10px 0;
@@ -191,43 +198,77 @@ html, body {
   letter-spacing: 0.3px;
 }
 
-.project-detail strong {
+.project-detail-projects strong {
   color: #555;
 }
 
-.project-detail a {
+.project-detail-projects a {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 20px;
-
   color: white;
+  background: linear-gradient(135deg, #7591be, #a8c3d4);
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
+  flex-shrink: 0;
+  align-self: flex-start;
 }
 
-.project-detail a:hover {
-
+.project-detail-projects a:hover {
   transform: translateY(-2px);
+  box-shadow: 0px 5px 15px rgba(117, 145, 190, 0.4);
+}
+
+/* Custom scrollbar para webkit browsers */
+.project-content-projects::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-content-projects::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.project-content-projects::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #7591be, #a8c3d4);
+  border-radius: 3px;
+}
+
+.project-content-projects::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #6a84b5, #9bb8ca);
 }
 
 /* Responsivo */
 @media (max-width: 992px) {
-  .projects-container {
+  .projects-container-projects {
     flex-direction: column-reverse;
     gap: 40px;
     padding: 40px 20px;
   }
 
-  .projects-menu {
+  .projects-menu-projects {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .menu-item {
+  .menu-item-projects {
     flex: 1 1 40%;
     text-align: center;
+  }
+
+  .project-detail-projects {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 500px;
+    min-height: 500px;
+    max-height: 500px;
+  }
+
+  .project-detail-projects img {
+    height: 150px;
   }
 }

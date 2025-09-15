@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./Projects.css";
 
 const Projects = ({ id }: { id?: string }) => {
@@ -10,8 +10,7 @@ const Projects = ({ id }: { id?: string }) => {
       "tecnologias": "Vite, React, TypeScript, CSS",
       "github": "https://github.com/cflorido/Portafolio",
       "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/Portafolio.png"
-    }
-    ,
+    },
     {
       "id": 2,
       "nombre": "Differential Privacy for Trajectories",
@@ -20,61 +19,64 @@ const Projects = ({ id }: { id?: string }) => {
       "github": "https://github.com/cflorido/Differential-Privacy-Mechanisms-for-Trajectories.git",
       "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/Privacidad.png"
     },
-      {
-    "id": 3,
-    "nombre": "Text Analytics for Political Fake News Detection",
-    "descripcion": "A collaborative project focused on detecting political fake news using text analytics and multiple machine learning models, including Naive Bayes, Random Forest, KNN, and Gradient Boosting. The system analyzes textual patterns to identify misinformation, optimizing detection with metrics like F1-score and ROC AUC.",
-    "tecnologias": "Python, Scikit-learn, Pandas, NumPy, TF-IDF, SMOTE",
-    "github": "https://github.com/cflorido/Proyecto1_B1",
-    "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/text_analytics.png"
-  }, 
-  {
-  "id": 4,
-  "nombre": "Banking Products Analysis",
-  "descripcion": "A comprehensive project analyzing customer behavior and predicting subscription to term deposits (CDTs) using data cleaning, exploratory analysis, and machine learning models. The project includes visualization dashboards, predictive modeling with neural networks and Random Forest, threshold optimization to maximize expected bank revenue, and deployment on AWS.",
-  "tecnologias": "Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, SMOTEENN, Dash, AWS",
-  "github": "https://github.com/cflorido/Proyecto_2_Analitica",
-  "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/BankingProducts.png"
-}
-
+    {
+      "id": 3,
+      "nombre": "Text Analytics for Political Fake News Detection",
+      "descripcion": "A collaborative project focused on detecting political fake news using text analytics and multiple machine learning models, including Naive Bayes, Random Forest, KNN, and Gradient Boosting. The system analyzes textual patterns to identify misinformation, optimizing detection with metrics like F1-score and ROC AUC.",
+      "tecnologias": "Python, Scikit-learn, Pandas, NumPy, TF-IDF, SMOTE",
+      "github": "https://github.com/cflorido/Proyecto1_B1",
+      "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/text_analytics.png"
+    },
+    {
+      "id": 4,
+      "nombre": "Banking Products Analysis",
+      "descripcion": "A comprehensive project analyzing customer behavior and predicting subscription to term deposits (CDTs) using data cleaning, exploratory analysis, and machine learning models. The project includes visualization dashboards, predictive modeling with neural networks and Random Forest, threshold optimization to maximize expected bank revenue, and deployment on AWS.",
+      "tecnologias": "Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, SMOTEENN, Dash, AWS",
+      "github": "https://github.com/cflorido/Proyecto_2_Analitica",
+      "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/BankingProducts.png"
+    }
   ];
 
   const [seleccionado, setSeleccionado] = useState(proyectos[0]);
 
- return (
-  <section id={id}>
-    <h2 className="projects-title">Portfolio highlights</h2>
-    <div className="projects-container">
-      {/* Menú de proyectos */}
-      <div className="projects-menu">
-        {proyectos.map((proyecto) => (
-          <div
-            key={proyecto.id}
-            className={`menu-item ${seleccionado.id === proyecto.id ? "activo" : ""}`}
-            onClick={() => setSeleccionado(proyecto)}
-          >
-            {proyecto.nombre}
-          </div>
-        ))}
-      </div>
+  return (
+    <section id={id}>
+      <h2 className="projects-title-projects">Portfolio highlights</h2>
+      <div className="projects-container-projects">
+        {/* Menú de proyectos */}
+        <div className="projects-menu-projects">
+          {proyectos.map((proyecto) => (
+            <div
+              key={proyecto.id}
+              className={`menu-item-projects ${seleccionado.id === proyecto.id ? "activo-projects" : ""}`}
+              onClick={() => setSeleccionado(proyecto)}
+            >
+              {proyecto.nombre}
+            </div>
+          ))}
+        </div>
 
-      {/* Detalle del proyecto */}
-      <div className="project-detail">
-        <img src={seleccionado.imagen} alt={seleccionado.nombre} />
-        <p>{seleccionado.descripcion}</p>
-        <p><strong>Technologies:</strong> {seleccionado.tecnologias}</p>
-        <a 
-          href={seleccionado.github} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="github-link"
-        >
-          GitHub
-        </a>
+        {/* Detalle del proyecto */}
+        <div className="project-detail-wrapper-projects">
+          <div className="project-detail-projects">
+            <img src={seleccionado.imagen} alt={seleccionado.nombre} />
+            <div className="project-content-projects">
+              <p>{seleccionado.descripcion}</p>
+              <p><strong>Technologies:</strong> {seleccionado.tecnologias}</p>
+            </div>
+            <a
+              href={seleccionado.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link-projects"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 };
 
 export default Projects;

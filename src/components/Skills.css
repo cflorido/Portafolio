@@ -198,7 +198,7 @@
 .card-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  color: #7591be;
+  color: #555;
   font-weight: 600;
   letter-spacing: 1px;
   margin-top: 4px;
@@ -210,7 +210,7 @@
   color: #555;
   font-size: 1rem;
   margin-bottom: 0px;
-  line-height: 1.2;
+
   font-weight: 300;
   letter-spacing: 0.3px;
 }
@@ -255,9 +255,7 @@
   transition: all 0.3s ease;
 }
 
-.control-btn:hover {
-  background-color: #0056b3;
-}
+
 
 /* Dots */
 .dots {
@@ -304,7 +302,7 @@
 
 /* 🔹 Hover mejorado con borde gradiente sutil */
 .card:not(.active):hover {
-  box-shadow: 0 10px 25px #7591be;
+
   cursor: pointer;
   position: relative;
   z-index: 9999;
@@ -321,6 +319,6 @@
 
 .card:not(.active):hover .card-icon {
   color: #7591be;
-  filter: drop-shadow(0 0 8px #7591be);
+
   z-index: 9999;
 }
