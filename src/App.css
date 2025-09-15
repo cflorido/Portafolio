@@ -30,7 +30,16 @@ body {
           height: 50px;
           border: none;
           border-radius: 50%;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background: linear-gradient(
+  135deg,
+  #738fbd 0%,
+
+
+  #eec6c7 60%,
+
+  #cc8eb1 100%
+);
+
           color: white;
           cursor: pointer;
           display: flex;
@@ -45,7 +54,17 @@ body {
         .scroll-to-top-btn:hover {
           transform: translateY(-3px);
           box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-          background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+          background: linear-gradient(
+  135deg,
+    #cc8eb1 0%
+      #eec6c7 60%,
+  #738fbd 100%,
+
+
+
+
+  
+);
         }
 
         .scroll-to-top-btn:active {
@@ -389,7 +408,7 @@ body::after {
 }
 
 .portfolio-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-size: 2.9rem;
   text-shadow: 2px 1px 4px rgba(0,0,0,0.3);
   fill: #7591be;

@@ -26,17 +26,19 @@
 
 .footer-logo {
   font-family: 'Outfit', sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 2.9rem;
   margin-bottom: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
 }
 
 .footer-text {
         font-family: 'Montserrat', sans-serif;
-  font-size: 1.0rem;
+  font-size: 1.2rem;
   color: #ffffff;
   margin-bottom: 20px;
+    font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .footer-links {

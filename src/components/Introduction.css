@@ -43,17 +43,12 @@
 }
 
 .intro-content p {
-        font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 font-size: 1.2rem;
    color: #ffffff;
-
+  letter-spacing: 1px;
   line-height: 1.8;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 5%;
 }
 
-.highlight5 {
-  color:#ffffff; 
-  text-shadow: 2px 1px 4px rgba(0,0,0,0.3);
- font-weight: 600;
-}

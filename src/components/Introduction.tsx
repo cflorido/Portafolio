@@ -90,7 +90,7 @@ const Introduction = ({ id: _id }: { id?: string }) => {
 
   // Estilos dinámicos para los brillitos
   const getSparkleStyle = (point: any) => {
-    const { size, opacity, hue } = point;
+    const { size, opacity} = point;
 return { 
   left: point.x - size / 2,
   top: point.y - size / 2,

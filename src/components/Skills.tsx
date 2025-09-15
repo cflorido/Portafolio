@@ -5,7 +5,7 @@ import './Skills.css';
 interface SkillCategory {
   id: number;
   name: string;
-  icon: ReactNode; // ahora es un componente de ícono
+  icon: ReactNode;
   color: string;
   skills: string[];
 }
@@ -66,61 +66,59 @@ const Skills: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-const CardsCarousel = () => {
-  const getVisibleCards = () => {
-    const cards = [];
-    for (let i = 0; i < 3; i++) {
-      const index = (currentIndex + i) % categories.length;
-      cards.push({ ...categories[index], visibleIndex: i });
-    }
-    return cards;
-  };
+  const CardsCarousel = () => {
+    const getVisibleCards = () => {
+      const cards = [];
+      for (let i = 0; i < 3; i++) {
+        const index = (currentIndex + i) % categories.length;
+        cards.push({ ...categories[index], visibleIndex: i });
+      }
+      return cards;
+    };
 
-  return (
-    <div className="carousel-container">
-      <div className="carousel-cards">
-        {getVisibleCards().map((category) => {
-          const isActive = category.visibleIndex === 1;
+    return (
+      <div className="carousel-container">
+        <div className="carousel-cards">
+          {getVisibleCards().map((category) => {
+            const isActive = category.visibleIndex === 1;
 
-          return (
-            <div
-              key={`${category.id}-${currentIndex}`}
-              className={`card ${isActive ? 'active' : ''}`}
-              style={{ border: isActive ? `3px solid ${category.color}` : '3px solid transparent' }}
-onClick={() => {
-  if (!isActive) {
-    if (category.visibleIndex === 0) {
-      // Clic en la izquierda → mover hacia atrás
-      setCurrentIndex((prev) =>
-        prev === 0 ? categories.length - 1 : prev - 1
-      );
-    } else if (category.visibleIndex === 2) {
-      // Clic en la derecha → mover hacia adelante
-      setCurrentIndex((prev) => (prev + 1) % categories.length);
-    }
-  }
-}}
+            return (
+              <div
+                key={`${category.id}-${currentIndex}`}
+                className={`card ${isActive ? 'active' : ''}`}
+                // 🔹 REMOVIDO: el borde inline ya que ahora usamos CSS con gradiente
+                onClick={() => {
+                  if (!isActive) {
+                    if (category.visibleIndex === 0) {
+                      // Clic en la izquierda → mover hacia atrás
+                      setCurrentIndex((prev) =>
+                        prev === 0 ? categories.length - 1 : prev - 1
+                      );
+                    } else if (category.visibleIndex === 2) {
+                      // Clic en la derecha → mover hacia adelante
+                      setCurrentIndex((prev) => (prev + 1) % categories.length);
+                    }
+                  }
+                }}
+              >
+                <div className="card-top" />
+                <div className="card-icon">{category.icon}</div>
+                <h3 className="card-title">{category.name}</h3>
 
-            >
-              <div className="card-top" style={{ backgroundColor: category.color }} />
-              <div className="card-icon">{category.icon}</div>
-              <h3 className="card-title">{category.name}</h3>
-
-              <div className={`skills-container ${isActive ? 'show' : ''}`}>
-                <ul className="card-list">
-                  {category.skills.map((skill, i) => (
-                    <li key={i}>{skill}</li>
-                  ))}
-                </ul>
+                <div className={`skills-container ${isActive ? 'show' : ''}`}>
+                  <ul className="card-list">
+                    {category.skills.map((skill, i) => (
+                      <li key={i}>{skill}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
-    </div>
-  );
-};
-
+    );
+  };
 
   return (
     <div className="skills-section">

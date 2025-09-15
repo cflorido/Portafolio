@@ -2,25 +2,25 @@
   padding: 0px;
   min-height: 0%;
   font-family: Arial, sans-serif;
-  
 }
 
 .skills-title {
   font-family: 'Outfit', sans-serif;
-  font-weight: 550;  /* prueba 200, 300 o 400 */ font-size: 3rem;
+  font-weight: 600;
+  font-size: 3rem;
   color: #7591be;
   margin-bottom: 40px;
   text-align: left;
   margin-left: -9%;
-   text-shadow: 2px 1px 4px rgba(0,0,0,0.3);
+  letter-spacing: 4px;
+  font-size: 2.9rem;
 }
-
-
 
 /* 🔹 Título de la card activa (sin línea) */
 .card.active .card-title {
   border-bottom: none;
 }
+
 /* Dots */
 .dot {
   width: 12px;
@@ -29,7 +29,7 @@
   border: none;
   padding: 0;
   margin: 0;
-  background-color: #b3c1d7; /* morado clarito para los inactivos */
+  background-color: #b3c1d7;
   cursor: pointer;
   transition: all 0.3s ease;
   appearance: none;
@@ -37,11 +37,11 @@
 }
 
 .dot.active {
-  background-color: #7591be; /* morado principal */
+  background-color: #7591be;
 }
 
 .dot:hover {
-  background-color: #b07eb8; /* morado intermedio al pasar el mouse */
+  background-color: #b07eb8;
 }
 
 /* Carrusel */
@@ -59,10 +59,13 @@
   align-items: center;
   min-height: 300px;
 }
+
 .card:not(.active) .card-title,
 .card:not(.active) .skills-container {
   display: none;
 }
+
+/* 🔹 NUEVO: Card con borde gradiente usando pseudo-elemento */
 .card {
   flex: 1;
   max-width: 455px;
@@ -80,18 +83,53 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-
-  /* 🔹 tamaño reducido por defecto */
   transform: scale(0.85);
+  
+  /* 🔹 Para el borde gradiente */
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
 
+/* 🔹 Pseudo-elemento para el borde gradiente */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  padding: 3px;
+    background: linear-gradient(
+  135deg,
+  #738fbd 0%,
+  #a8c3d4 20%,
+
+  #eec6c7 60%,
+  #db88a4 80%,
+  #cc8eb1 100%
+);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+/* 🔹 Card activa muestra el borde gradiente */
+.card.active::before {
+  opacity: 1;
 }
 
 .card.active {
-  /* 🔹 la del centro se ve más grande */
   transform: scale(1.1);
   opacity: 1;
-  z-index: 2; /* para que quede encima */
+  z-index: 2;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border: 3px solid transparent; /* Mantener transparente para que se vea el gradiente */
 }
 
 .card-list {
@@ -107,15 +145,25 @@
   margin-bottom: 6px;
 }
 
-
-
-
 .card-top {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
+  background: linear-gradient(
+    135deg,
+    #738fbd 0%,
+    #a8c3d4 20%,
+    #eec6c7 60%,
+    #db88a4 80%,
+    #cc8eb1 100%
+  );
+}
+
+/* 🔹 Ocultar la línea superior para la card activa */
+.card.active .card-top {
+  display: none;
 }
 
 /* Estilo del icono por defecto */
@@ -132,7 +180,7 @@
 }
 
 .card:not(.active) .card-icon {
-  font-size: 90px; /* Más grande cuando no está activa */
+  font-size: 90px;
   margin-bottom: 0;
 }
 
@@ -144,24 +192,27 @@
 }
 
 .card.active .card-icon {
-  font-size: 50px; /* tamaño normal para activa */
+  font-size: 50px;
 }
 
 .card-title {
-        font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   color: #7591be;
-  font-weight: bold;
-  margin-top: 4px; /* Espacio mínimo arriba */
-  margin-bottom: 6px; /* Un poco de espacio para la lista */
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  margin-bottom: 6px;
 }
 
 .card-description {
-      font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #555;
   font-size: 1rem;
   margin-bottom: 0px;
   line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: 0.3px;
 }
 
 .progress-bar {
@@ -214,8 +265,6 @@
   gap: 8px;
 }
 
-
-
 .dot:hover {
   background-color: #999;
 }
@@ -227,6 +276,7 @@
   margin-top: 20px;
   font-size: 14px;
 }
+
 .skills-container {
   max-height: 0;
   overflow: hidden;
@@ -235,7 +285,7 @@
 }
 
 .skills-container.show {
-  max-height: 200px; /* ajusta según contenido */
+  max-height: 200px;
   opacity: 1;
 }
 
@@ -252,21 +302,25 @@
   margin-bottom: 6px;
 }
 
+/* 🔹 Hover mejorado con borde gradiente sutil */
 .card:not(.active):hover {
   box-shadow: 0 10px 25px #7591be;
   cursor: pointer;
   position: relative;
   z-index: 9999;
-
 }
 
+/* 🔹 Mostrar borde gradiente al hacer hover en cards inactivas */
+.card:not(.active):hover::before {
+  opacity: 0.6;
+}
 
 .card {
   transform-origin: center center;
 }
+
 .card:not(.active):hover .card-icon {
-  color: #7591be; /* morado principal */
+  color: #7591be;
   filter: drop-shadow(0 0 8px #7591be);
   z-index: 9999;
 }
-
