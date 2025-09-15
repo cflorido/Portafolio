@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Introduction from './components/Introduction';
 import Hobbies from './components/Hobbies';
-import Data from './components/data';
+import Data from './components/Data';
 import Codelab from './components/Codelab';
 
 function App() {

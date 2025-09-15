@@ -476,20 +476,9 @@
     padding: 5px;
   }
   
-  .carousel-cards {
-    justify-content: center;
-  }
-  
-  .card:not(.active) {
-    display: none;
-  }
-  
-  .card.active {
-    flex: 0 0 250px;
-    max-width: 250px;
+  .card {
     padding: 15px 10px;
     min-height: 160px;
-    transform: scale(1);
   }
   
   .skills-title {

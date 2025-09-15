@@ -27,15 +27,6 @@ body {
   max-width: 100%;
   box-sizing: border-box;
 }
-
-/* Asegurar que todos los elementos ocupen el 100% del ancho */
-* {
-  box-sizing: border-box;
-}
-
-section, div, main, article, aside, header, footer {
-  max-width: 100%;
-}
 .skills-section {
   margin-bottom: 50px; 
   position: relative;

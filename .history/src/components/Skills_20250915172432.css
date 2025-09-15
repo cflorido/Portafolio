@@ -3,7 +3,6 @@
   min-height: 0%;
   font-family: Arial, sans-serif;
   width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -49,8 +48,8 @@
 /* Carrusel */
 .carousel-container {
   width: 100%;
-  max-width: 100%;
-  margin: 0;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -61,8 +60,7 @@
   justify-content: center;
   align-items: center;
   min-height: 300px;
-  flex-wrap: nowrap;
-  overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .card:not(.active) .card-title,
@@ -72,8 +70,8 @@
 
 /* 🔹 NUEVO: Card con borde gradiente usando pseudo-elemento */
 .card {
-  flex: 0 0 300px;
-  max-width: 300px;
+  flex: 1;
+  max-width: 455px;
   max-height: 250px;
   min-height: 250px;
   min-width: 280px;
@@ -324,196 +322,6 @@
 
 .card:not(.active):hover .card-icon {
   color: #7591be;
+
   z-index: 9999;
-}
-
-/* 📱 Responsive Design */
-@media (max-width: 1024px) {
-  .skills-section {
-    padding: 0px 15px;
-  }
-  
-  .carousel-container {
-    padding: 15px;
-  }
-  
-  .carousel-cards {
-    gap: 25px;
-  }
-  
-  .card {
-    flex: 0 0 280px;
-    max-width: 280px;
-  }
-  
-  .skills-title {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .carousel-cards {
-    justify-content: center;
-  }
-  
-  .card:not(.active) {
-    display: none;
-  }
-  
-  .card.active {
-    flex: 0 0 350px;
-    max-width: 350px;
-    transform: scale(1);
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-section {
-    padding: 0px 10px;
-  }
-  
-  .carousel-container {
-    padding: 10px;
-  }
-  
-  .carousel-cards {
-    justify-content: center;
-  }
-  
-  .card:not(.active) {
-    display: none;
-  }
-  
-  .card.active {
-    flex: 0 0 300px;
-    max-width: 300px;
-    transform: scale(1);
-  }
-  
-  .skills-title {
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-  }
-  
-  .controls {
-    margin-top: 20px;
-  }
-  
-  .dot {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-section {
-    padding: 0px 8px;
-  }
-  
-  .carousel-container {
-    padding: 8px;
-  }
-  
-  .carousel-cards {
-    justify-content: center;
-  }
-  
-  .card:not(.active) {
-    display: none;
-  }
-  
-  .card.active {
-    flex: 0 0 280px;
-    max-width: 280px;
-    padding: 20px 15px;
-    min-height: 180px;
-    transform: scale(1);
-  }
-  
-  .skills-title {
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-  }
-  
-  .card-title {
-    font-size: 1.1rem;
-  }
-  
-  .card-description {
-    font-size: 0.9rem;
-  }
-  
-  .card-list {
-    font-size: 13px;
-  }
-  
-  .card-icon {
-    font-size: 40px !important;
-  }
-  
-  .card:not(.active) .card-icon {
-    font-size: 70px !important;
-  }
-  
-  .controls {
-    gap: 15px;
-  }
-  
-  .dot {
-    width: 8px;
-    height: 8px;
-  }
-}
-
-@media (max-width: 320px) {
-  .skills-section {
-    padding: 0px 5px;
-  }
-  
-  .carousel-container {
-    padding: 5px;
-  }
-  
-  .carousel-cards {
-    justify-content: center;
-  }
-  
-  .card:not(.active) {
-    display: none;
-  }
-  
-  .card.active {
-    flex: 0 0 250px;
-    max-width: 250px;
-    padding: 15px 10px;
-    min-height: 160px;
-    transform: scale(1);
-  }
-  
-  .skills-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .card-title {
-    font-size: 1rem;
-  }
-  
-  .card-description {
-    font-size: 0.85rem;
-  }
-  
-  .card-list {
-    font-size: 12px;
-  }
-  
-  .card-icon {
-    font-size: 35px !important;
-  }
-  
-  .card:not(.active) .card-icon {
-    font-size: 60px !important;
-  }
 }

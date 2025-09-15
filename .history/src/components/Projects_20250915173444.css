@@ -2,8 +2,8 @@
 
 .projects-container-projects {
   display: flex;
-  max-width: 100%;
-  margin: 0;
+  max-width: 80%;
+  margin: 0 auto;
   gap: 70px;
   font-family: 'Montserrat', sans-serif;
   color: #4e3b61;

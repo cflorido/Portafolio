@@ -20,31 +20,14 @@ body {
   max-width: 100%;
   box-sizing: border-box;
 }
-
-#root {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* Asegurar que todos los elementos ocupen el 100% del ancho */
-* {
-  box-sizing: border-box;
-}
-
-section, div, main, article, aside, header, footer {
-  max-width: 100%;
-}
 .skills-section {
   margin-bottom: 50px; 
   position: relative;
-  max-width: 100%;
-  margin: 0;
+  max-width: 83%;
+  margin: 0 auto;
   padding: 50px 20px;
   z-index: 1;
   box-sizing: border-box;
-  width: 100%;
 }
         .scroll-to-top-btn {
           position: fixed;
@@ -205,9 +188,9 @@ body::after {
   padding: 0px 20px;
   gap: 300px;
   box-sizing: border-box;
-  max-width: 100%;
+  max-width: 80%;
   min-height: 0%;
-  margin: 0;
+  margin: auto;
   width: 100%;
 }
 .highlight2 {

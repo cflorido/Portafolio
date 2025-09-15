@@ -2,8 +2,8 @@
 
 .projects-container-projects {
   display: flex;
-  max-width: 100%;
-  margin: 0;
+  max-width: 80%;
+  margin: 0 auto;
   gap: 70px;
   font-family: 'Montserrat', sans-serif;
   color: #4e3b61;
@@ -121,7 +121,6 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
 
 /* 🔹 Línea gradiente superior (como card-top de Skills) */
@@ -240,53 +239,23 @@
   background: linear-gradient(135deg, #6a84b5, #9bb8ca);
 }
 
-/* 📱 Responsive Design */
-@media (max-width: 1200px) {
-  .projects-container-projects {
-    max-width: 90%;
-    gap: 50px;
-    padding: 0 15px;
-  }
-  
-  .project-detail-projects {
-    width: 480px;
-    min-width: 480px;
-    max-width: 480px;
-    height: 600px;
-    min-height: 600px;
-    max-height: 600px;
-    padding: 35px;
-  }
-  
-  .projects-title-projects {
-    font-size: 2.5rem;
-    letter-spacing: 3px;
-  }
-}
-
+/* Responsivo */
 @media (max-width: 992px) {
   .projects-container-projects {
     flex-direction: column-reverse;
-    gap: 30px;
-    padding: 30px 20px;
-    max-width: 95%;
+    gap: 40px;
+    padding: 40px 20px;
   }
 
   .projects-menu-projects {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
   }
 
   .menu-item-projects {
-    flex: 1 1 45%;
+    flex: 1 1 40%;
     text-align: center;
-    min-width: 120px;
-    height: 60px;
-    min-height: 60px;
-    padding: 12px 15px;
-    font-size: 0.9rem;
   }
 
   .project-detail-projects {
@@ -296,159 +265,9 @@
     height: 500px;
     min-height: 500px;
     max-height: 500px;
-    padding: 30px;
   }
 
   .project-detail-projects img {
     height: 150px;
-  }
-  
-  .projects-title-projects {
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-container-projects {
-    gap: 25px;
-    padding: 25px 15px;
-    max-width: 100%;
-  }
-
-  .projects-menu-projects {
-    gap: 8px;
-  }
-
-  .menu-item-projects {
-    flex: 1 1 100%;
-    height: 55px;
-    min-height: 55px;
-    padding: 10px 12px;
-    font-size: 0.85rem;
-  }
-
-  .project-detail-projects {
-    height: 450px;
-    min-height: 450px;
-    max-height: 450px;
-    padding: 25px;
-  }
-
-  .project-detail-projects img {
-    height: 130px;
-  }
-  
-  .projects-title-projects {
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-  }
-  
-  .project-detail-projects h2 {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-  }
-  
-  .project-detail-projects p {
-    font-size: 0.9rem;
-    margin: 8px 0;
-  }
-  
-  .project-detail-projects a {
-    padding: 10px 16px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .projects-container-projects {
-    gap: 20px;
-    padding: 20px 10px;
-  }
-
-  .menu-item-projects {
-    height: 50px;
-    min-height: 50px;
-    padding: 8px 10px;
-    font-size: 0.8rem;
-  }
-
-  .project-detail-projects {
-    height: 400px;
-    min-height: 400px;
-    max-height: 400px;
-    padding: 20px;
-  }
-
-  .project-detail-projects img {
-    height: 110px;
-  }
-  
-  .projects-title-projects {
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
-    margin-bottom: 25px;
-  }
-  
-  .project-detail-projects h2 {
-    font-size: 1rem;
-    margin-bottom: 12px;
-  }
-  
-  .project-detail-projects p {
-    font-size: 0.85rem;
-    margin: 6px 0;
-    line-height: 1.5;
-  }
-  
-  .project-detail-projects a {
-    padding: 8px 14px;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 320px) {
-  .projects-container-projects {
-    gap: 15px;
-    padding: 15px 5px;
-  }
-
-  .menu-item-projects {
-    height: 45px;
-    min-height: 45px;
-    padding: 6px 8px;
-    font-size: 0.75rem;
-  }
-
-  .project-detail-projects {
-    height: 350px;
-    min-height: 350px;
-    max-height: 350px;
-    padding: 15px;
-  }
-
-  .project-detail-projects img {
-    height: 100px;
-  }
-  
-  .projects-title-projects {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-  }
-  
-  .project-detail-projects h2 {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-  }
-  
-  .project-detail-projects p {
-    font-size: 0.8rem;
-    margin: 5px 0;
-  }
-  
-  .project-detail-projects a {
-    padding: 6px 12px;
-    font-size: 0.8rem;
   }
 }

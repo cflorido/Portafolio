@@ -3,7 +3,6 @@
   min-height: 0%;
   font-family: Arial, sans-serif;
   width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -49,20 +48,22 @@
 /* Carrusel */
 .carousel-container {
   width: 100%;
-  max-width: 100%;
-  margin: 0;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
 }
 
 .carousel-cards {
   display: flex;
-  gap: 35px;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   min-height: 300px;
   flex-wrap: nowrap;
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
 }
 
 .card:not(.active) .card-title,
@@ -327,6 +328,25 @@
   z-index: 9999;
 }
 
+/* Scrollbar personalizado para el carrusel */
+.carousel-cards::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel-cards::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.carousel-cards::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #7591be, #a8c3d4);
+  border-radius: 3px;
+}
+
+.carousel-cards::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #6a84b5, #9bb8ca);
+}
+
 /* 📱 Responsive Design */
 @media (max-width: 1024px) {
   .skills-section {
@@ -342,28 +362,12 @@
   }
   
   .card {
-    flex: 0 0 280px;
-    max-width: 280px;
+    min-width: 250px;
+    max-width: 400px;
   }
   
   .skills-title {
     font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .carousel-cards {
-    justify-content: center;
-  }
-  
-  .card:not(.active) {
-    display: none;
-  }
-  
-  .card.active {
-    flex: 0 0 350px;
-    max-width: 350px;
-    transform: scale(1);
   }
 }
 
@@ -377,16 +381,25 @@
   }
   
   .carousel-cards {
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    min-height: auto;
+  }
+  
+  .card {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: none;
+    transform: scale(1);
+    margin-bottom: 10px;
   }
   
   .card:not(.active) {
-    display: none;
+    transform: scale(1);
   }
   
   .card.active {
-    flex: 0 0 300px;
-    max-width: 300px;
     transform: scale(1);
   }
   
@@ -415,20 +428,9 @@
     padding: 8px;
   }
   
-  .carousel-cards {
-    justify-content: center;
-  }
-  
-  .card:not(.active) {
-    display: none;
-  }
-  
-  .card.active {
-    flex: 0 0 280px;
-    max-width: 280px;
+  .card {
     padding: 20px 15px;
     min-height: 180px;
-    transform: scale(1);
   }
   
   .skills-title {
@@ -476,20 +478,9 @@
     padding: 5px;
   }
   
-  .carousel-cards {
-    justify-content: center;
-  }
-  
-  .card:not(.active) {
-    display: none;
-  }
-  
-  .card.active {
-    flex: 0 0 250px;
-    max-width: 250px;
+  .card {
     padding: 15px 10px;
     min-height: 160px;
-    transform: scale(1);
   }
   
   .skills-title {

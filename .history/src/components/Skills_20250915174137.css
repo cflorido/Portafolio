@@ -3,7 +3,6 @@
   min-height: 0%;
   font-family: Arial, sans-serif;
   width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -49,8 +48,8 @@
 /* Carrusel */
 .carousel-container {
   width: 100%;
-  max-width: 100%;
-  margin: 0;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -415,20 +414,9 @@
     padding: 8px;
   }
   
-  .carousel-cards {
-    justify-content: center;
-  }
-  
-  .card:not(.active) {
-    display: none;
-  }
-  
-  .card.active {
-    flex: 0 0 280px;
-    max-width: 280px;
+  .card {
     padding: 20px 15px;
     min-height: 180px;
-    transform: scale(1);
   }
   
   .skills-title {
@@ -476,20 +464,9 @@
     padding: 5px;
   }
   
-  .carousel-cards {
-    justify-content: center;
-  }
-  
-  .card:not(.active) {
-    display: none;
-  }
-  
-  .card.active {
-    flex: 0 0 250px;
-    max-width: 250px;
+  .card {
     padding: 15px 10px;
     min-height: 160px;
-    transform: scale(1);
   }
   
   .skills-title {

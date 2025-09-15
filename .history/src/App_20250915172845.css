@@ -2,49 +2,26 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  background-color: #e9e8e8;
-  box-sizing: border-box;
+  width: 100%; /* Evita scroll horizontal */
+  background-color: #e9e8e8; /* o el color de fondo que uses */
 }
-
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to bottom, #f9f9f0);
-  display: block;
-  user-select: none;
-  overflow-x: hidden;
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #f9f9f0); /* fondo base */
 
-#root {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* Asegurar que todos los elementos ocupen el 100% del ancho */
-* {
-  box-sizing: border-box;
-}
-
-section, div, main, article, aside, header, footer {
-  max-width: 100%;
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    overflow-x: hidden; /* para que no se salgan scrollbars */
 }
 .skills-section {
   margin-bottom: 50px; 
   position: relative;
-  max-width: 100%;
-  margin: 0;
+  max-width: 83%;
+  margin: 0 auto;
   padding: 50px 20px;
   z-index: 1;
   box-sizing: border-box;
-  width: 100%;
 }
         .scroll-to-top-btn {
           position: fixed;
@@ -205,9 +182,9 @@ body::after {
   padding: 0px 20px;
   gap: 300px;
   box-sizing: border-box;
-  max-width: 100%;
+  max-width: 80%;
   min-height: 0%;
-  margin: 0;
+  margin: auto;
   width: 100%;
 }
 .highlight2 {
@@ -361,12 +338,11 @@ body::after {
 /* Texto curvo */
 .portfolio-text-svg {
   position: absolute;
-  top: -70px;
+  top: -70px; /* lo mueve hacia arriba */
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  overflow: visible;
 }
 
 .portfolio-text {
@@ -397,15 +373,6 @@ body::after {
     height: 280px;
   }
   
-  .portfolio-text {
-    font-size: 2.5rem;
-    letter-spacing: 3px;
-  }
-  
-  .portfolio-text-svg {
-    top: -65px;
-  }
-  
   .corner-text-top {
     font-size: 1.3rem;
   }
@@ -432,15 +399,6 @@ body::after {
     height: 250px;
   }
   
-  .portfolio-text {
-    font-size: 2.2rem;
-    letter-spacing: 2.5px;
-  }
-  
-  .portfolio-text-svg {
-    top: -62px;
-  }
-  
   .corner-text-top {
     font-size: 1.2rem;
   }
@@ -458,32 +416,6 @@ body::after {
   body::after {
     width: 250px;
     height: 250px;
-  }
-}
-
-@media (max-width: 850px) {
-  .portfolio-container {
-    gap: 100px;
-    padding: 0px 8px;
-  }
-  
-  .portfolio-circle {
-    width: 320px;
-    height: 320px;
-  }
-  
-  .foto-container {
-    width: 230px;
-    height: 230px;
-  }
-  
-  .portfolio-text {
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
-  
-  .portfolio-text-svg {
-    top: -58px;
   }
 }
 
@@ -531,10 +463,6 @@ body::after {
     letter-spacing: 2px;
   }
   
-  .portfolio-text-svg {
-    top: -60px;
-  }
-  
   .bolas span {
     width: 150px;
     height: 150px;
@@ -580,10 +508,6 @@ body::after {
   .portfolio-text {
     font-size: 1.8rem;
     letter-spacing: 1px;
-  }
-  
-  .portfolio-text-svg {
-    top: -50px;
   }
   
   .bolas span {
@@ -640,10 +564,6 @@ body::after {
     letter-spacing: 0.5px;
   }
   
-  .portfolio-text-svg {
-    top: -40px;
-  }
-  
   .bolas span {
     width: 100px;
     height: 100px;
@@ -664,35 +584,5 @@ body::after {
     right: 10px;
     width: 35px;
     height: 35px;
-  }
-}
-
-@media (max-width: 280px) {
-  .portfolio-circle {
-    width: 180px;
-    height: 180px;
-    margin: 8px auto;
-  }
-  
-  .foto-container {
-    width: 130px;
-    height: 130px;
-  }
-  
-  .portfolio-text {
-    font-size: 1.2rem;
-    letter-spacing: 0.3px;
-  }
-  
-  .portfolio-text-svg {
-    top: -35px;
-  }
-  
-  .corner-text-top {
-    font-size: 0.8rem;
-  }
-
-  .corner-text-bottom {
-    font-size: 0.8rem;
   }
 }

@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -13,15 +12,12 @@
   max-width: 1100px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
   flex-wrap: wrap;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .codelab-logo img {
   width: 330px;
-  max-width: 100%;
   height: auto;
   border-radius: 0px;
 }
@@ -32,7 +28,6 @@
 
 .codelab-text {
   flex: 1;
-  min-width: 0;
   font-family: 'Montserrat', sans-serif;
   color: #7591be;
 }
@@ -133,106 +128,23 @@
 }
 
 /* 📱 Responsivo */
-@media (max-width: 1024px) {
-  .codelab-section {
-    padding: 0px 15px;
-  }
-  
-  .codelab-container {
-    gap: 15px;
-  }
-  
-  .codelab-logo img {
-    width: 280px;
-  }
-  
-  .codelab-title {
-    font-size: 2.5rem;
-  }
-}
-
 @media (max-width: 768px) {
-  .codelab-section {
-    padding: 0px 10px;
-  }
-  
   .codelab-container {
     flex-direction: column;
     text-align: center;
-    gap: 20px;
   }
 
   .codelab-logo img {
-    width: 200px;
-    margin-bottom: 0;
+    width: 180px;
+    margin-bottom: 20px;
   }
 
   .codelab-title {
-    font-size: 2.2rem;
-    letter-spacing: 2px;
-  }
-  
-  .codelab-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .codelab-description {
-    font-size: 0.95rem;
+    font-size: 2rem;
   }
   
   .codelab-instagram-btn {
     font-size: 0.9rem;
     padding: 10px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .codelab-section {
-    padding: 0px 8px;
-  }
-  
-  .codelab-logo img {
-    width: 160px;
-  }
-
-  .codelab-title {
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-  }
-  
-  .codelab-subtitle {
-    font-size: 1rem;
-  }
-  
-  .codelab-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-  
-  .codelab-instagram-btn {
-    font-size: 0.85rem;
-    padding: 8px 16px;
-  }
-}
-
-@media (max-width: 320px) {
-  .codelab-section {
-    padding: 0px 5px;
-  }
-  
-  .codelab-logo img {
-    width: 140px;
-  }
-
-  .codelab-title {
-    font-size: 1.5rem;
-  }
-  
-  .codelab-subtitle {
-    font-size: 0.9rem;
-  }
-  
-  .codelab-description {
-    font-size: 0.85rem;
   }
 }
