@@ -23,7 +23,7 @@ function CareerHistory({ id: _id }: CareerHistoryProps) {
 
   return (
     <section className="career-history">
-      <h2 className="career-title">Career History</h2>
+      <h2 className="career-title">Career & Community Engagement</h2>
       <div className="timeline">
         {/* Item 1 */}
         <div className="timeline-item">

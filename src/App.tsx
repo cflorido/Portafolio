@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Introduction from './components/Introduction';
 import Hobbies from './components/Hobbies';
 import Data from './components/Data';
+import Codelab from './components/Codelab';
 
 function App() {
   const [_showHeader, setShowHeader] = useState(false);
@@ -97,6 +98,7 @@ function App() {
         </div>
         <CareerHistory />
       </section>
+      <Codelab />
       <Data />
       <section id="skills" className="skills-section">
         <div className="bolas">

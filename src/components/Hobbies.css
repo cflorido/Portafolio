@@ -4,7 +4,7 @@
   overflow: hidden;
   border-radius: 20px;
   z-index: 1;
-  background-color: #925c93;
+
   display: flex; /* 👈 Agregamos flexbox */
   align-items: center; /* 👈 Centra verticalmente */
   justify-content: center; /* 👈 Centra horizontalmente */
