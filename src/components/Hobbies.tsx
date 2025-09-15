@@ -115,6 +115,8 @@ return {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+
+        <div className="hobbies-inner">
       {/* Trail */}
       <div className="trail-container">
         {trailPoints.map((point) => (
@@ -247,7 +249,7 @@ return {
 
   </div>
 </div>
-
+</div>
     </section>
   );
 };

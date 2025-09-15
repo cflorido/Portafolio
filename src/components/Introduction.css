@@ -63,6 +63,10 @@
   /* Prevenir overflow del texto */
   word-break: break-word;
   hyphens: auto;
+  max-width: 82%; /* 100% - (9% + 9%) */
+  margin: 0 auto; /* centra el contenido */
+  padding: 0; /* si quieres, podrías dejar padding lateral para móviles */
+  box-sizing: border-box;
 }
 
 .highlight5 {

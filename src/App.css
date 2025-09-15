@@ -209,6 +209,10 @@ body::after {
   min-height: 0%;
   margin: 0;
   width: 100%;
+  max-width: 82%; /* 100% - (9% + 9%) */
+  margin: 0 auto; /* centra el contenido */
+  padding: 0; /* si quieres, podrías dejar padding lateral para móviles */
+  box-sizing: border-box;
 }
 .highlight2 {
   color: #7591be; 

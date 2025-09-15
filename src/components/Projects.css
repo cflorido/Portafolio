@@ -11,6 +11,12 @@
   padding: 0 20px;
   box-sizing: border-box;
   width: 100%;
+  
+}
+.projects-inner-container {
+
+  margin-left: 9%;
+  margin-right: 9%;
 }
 
 .github-link-projects {

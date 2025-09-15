@@ -40,42 +40,45 @@ const Projects = ({ id }: { id?: string }) => {
   const [seleccionado, setSeleccionado] = useState(proyectos[0]);
 
   return (
-    <section id={id}>
-      <h2 className="projects-title-projects">Portfolio highlights</h2>
-      <div className="projects-container-projects">
-        {/* Menú de proyectos */}
-        <div className="projects-menu-projects">
-          {proyectos.map((proyecto) => (
-            <div
-              key={proyecto.id}
-              className={`menu-item-projects ${seleccionado.id === proyecto.id ? "activo-projects" : ""}`}
-              onClick={() => setSeleccionado(proyecto)}
-            >
-              {proyecto.nombre}
-            </div>
-          ))}
-        </div>
-
-        {/* Detalle del proyecto */}
-        <div className="project-detail-wrapper-projects">
-          <div className="project-detail-projects">
-            <img src={seleccionado.imagen} alt={seleccionado.nombre} />
-            <div className="project-content-projects">
-              <p>{seleccionado.descripcion}</p>
-              <p><strong>Technologies:</strong> {seleccionado.tecnologias}</p>
-            </div>
-            <a
-              href={seleccionado.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link-projects"
-            >
-              GitHub
-            </a>
+   <section id={id}>
+  <h2 className="projects-title-projects">Portfolio highlights</h2>
+  <div className="projects-inner-container">
+    <div className="projects-container-projects">
+      {/* Menú de proyectos */}
+      <div className="projects-menu-projects">
+        {proyectos.map((proyecto) => (
+          <div
+            key={proyecto.id}
+            className={`menu-item-projects ${seleccionado.id === proyecto.id ? "activo-projects" : ""}`}
+            onClick={() => setSeleccionado(proyecto)}
+          >
+            {proyecto.nombre}
           </div>
+        ))}
+      </div>
+
+      {/* Detalle del proyecto */}
+      <div className="project-detail-wrapper-projects">
+        <div className="project-detail-projects">
+          <img src={seleccionado.imagen} alt={seleccionado.nombre} />
+          <div className="project-content-projects">
+            <p>{seleccionado.descripcion}</p>
+            <p><strong>Technologies:</strong> {seleccionado.tecnologias}</p>
+          </div>
+          <a
+            href={seleccionado.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link-projects"
+          >
+            GitHub
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   );
 };
 
