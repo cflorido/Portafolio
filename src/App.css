@@ -218,6 +218,7 @@ body::after {
 /* Texto esquina superior izquierda */
 .corner-text-top {
   position: absolute;
+  
   top: 20px;
   left: 0px;
   font-family: 'Montserrat', sans-serif;
@@ -694,5 +695,15 @@ body::after {
 
   .corner-text-bottom {
     font-size: 0.8rem;
+  }
+}
+
+/* 👇 Quitar las bolas flotantes en celulares */
+@media (max-width: 768px) {
+  .bolas,
+  .bolas span,
+  body::before,
+  body::after {
+    display: none !important;
   }
 }

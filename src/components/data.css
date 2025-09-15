@@ -212,15 +212,14 @@
     
   .data-item {
     width: 100%;
-    max-width: 280px;
-    min-width: 250px;
+    min-width: auto;  /* 👈 evita forzar ancho mínimo */
+    max-width: 100%;  /* se adapta a la pantalla */
   }
-    
+
   .data-value-container,
   .slot-container {
     width: 100%;
-    min-width: 250px;
-    min-height: 70px;
+    min-width: auto;  /* 👈 quita la restricción */
   }
 
   .slot-item {
@@ -236,69 +235,32 @@
 }
 
 @media (max-width: 480px) {
-  .Maindata-container {
-    min-height: 350px;
-    padding: 15px 0;
-  }
-  
-  .data-container {
-    gap: 20px;
-    padding: 15px 10px;
-  }
-    
   .data-item {
-    min-width: 200px;
+    width: 100%;
+    min-width: auto;   /* 👈 ya no forzar */
     max-width: 100%;
   }
-    
+
   .data-value-container,
   .slot-container {
-    min-width: 200px;
+    width: 100%;
+    min-width: auto;   /* 👈 ya no forzar */
     min-height: 60px;
-  }
-
-  .slot-item {
-    height: 60px;
-    font-size: 0.9rem;
-    padding: 0 15px;
-  }
-    
-  .data-label {
-    font-size: 0.9rem;
-    margin-bottom: 8px;
   }
 }
 
 @media (max-width: 320px) {
-  .Maindata-container {
-    min-height: 300px;
-    padding: 10px 0;
-  }
-  
-  .data-container {
-    gap: 15px;
-    padding: 10px 5px;
-  }
-    
   .data-item {
-    min-width: 180px;
-  }
-    
-  .data-value-container,
-  .slot-container {
-    min-width: 180px;
-    min-height: 55px;
+    width: 100%;
+    min-width: auto;   /* 👈 ya no forzar */
+    max-width: 100%;
   }
 
-  .slot-item {
-    height: 55px;
-    font-size: 0.85rem;
-    padding: 0 10px;
-  }
-    
-  .data-label {
-    font-size: 0.85rem;
-    margin-bottom: 6px;
+  .data-value-container,
+  .slot-container {
+    width: 100%;
+    min-width: auto;   /* 👈 ya no forzar */
+    min-height: 55px;
   }
 }
 
