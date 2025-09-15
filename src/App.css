@@ -223,7 +223,7 @@ body::after {
 .corner-text-bottom {
   position: absolute;
   position: absolute;
-  top: 70%;  /* 👈 sube o baja el texto hasta que quede visible */
+  top: 74%;  /* 👈 sube o baja el texto hasta que quede visible */
   right: 0px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
@@ -323,58 +323,6 @@ body::after {
   100% { opacity: 0; transform: rotate(360deg); }
 }
 
-/* ✅ Responsivo */
-@media (max-width: 992px) {
-  .portfolio-container {
-    padding: 20px 20px 30px 20px;
-    min-height: calc(100vh - 70px); /* Ajustar para navbar en mobile */
-  }
-
-  .portfolio-circle {
-    width: 350px;
-    height: 350px;
-  }
-
-
-
-  .corner-text-bottom {
-    font-size: 0.9rem;
-    
-    
-    bottom: 40px; /* Más espacio en mobile */
-    right: 20px;
-  }
-
-  .portfolio-text {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .portfolio-container {
-    padding: 15px 15px 25px 15px;
-    min-height: calc(100vh - 60px); /* Navbar más pequeño en mobile */
-  }
-
-  .portfolio-circle {
-    width: 300px;
-    height: 300px;
-  }
-
-
-
-  .corner-text-bottom {
-    font-size: 0.8rem;
-    bottom: 35px; /* Mantener visible en pantallas pequeñas */
-    right: 15px;
-   
-  }
-
-  .portfolio-text {
-    font-size: 1.5rem;
-  }
-}
-
 .portfolio-circle {
   position: relative;
   width: 450px;
@@ -414,4 +362,31 @@ body::after {
   fill: #7591be;
   font-weight: 600;
   letter-spacing: 4px;
+}
+
+
+/* --- Versión mobile --- */
+@media (max-width: 768px) {
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px; /* espacio entre los textos y el logo */
+  }
+
+  .corner-text-top,
+  .corner-text-bottom {
+    position: static;   /* ✅ quita absolute */
+    text-align: center; /* centra el texto */
+    margin-bottom: 10%;
+  }
+
+  .corner-text-top {
+    order: -1; /* se pone arriba del logo */
+        margin-top: 10%;
+  }
+
+  .corner-text-bottom {
+    order: 1; /* se queda abajo del logo */
+  }
 }
