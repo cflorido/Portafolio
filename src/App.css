@@ -3,12 +3,12 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%; /* Evita scroll horizontal */
-  background-color: #fff; /* o el color de fondo que uses */
+  background-color: #e9e8e8; /* o el color de fondo que uses */
 }
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to bottom, #faf8ec, #faf8ec); /* fondo base */
-    color: #d94f70;
+    background: linear-gradient(to bottom, #f9f9f0); /* fondo base */
+
     display: flex;
     justify-content: center;
     user-select: none;
@@ -96,10 +96,11 @@ body {
   position: absolute;
   width: 250px;
   height: 250px;
-  background: radial-gradient(circle, #dcc5e2 40%, transparent 70%);
+  background: radial-gradient(circle,#edc2c5 20%, transparent 70%);
   border-radius: 50%;
   opacity: 0.6;
   animation: mover 20s infinite alternate ease-in-out;
+
 }
 .bolas span:nth-child(1) {
   top: 10%;
@@ -133,7 +134,7 @@ body::after {
     position: absolute;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, #dcc5e2 40%, transparent 70%);
+    background: radial-gradient(circle,#edc2c5 20%, transparent 70%);
     border-radius: 50%;
     opacity: 0.6;
     animation: mover 10s infinite alternate ease-in-out;
@@ -175,7 +176,7 @@ body::after {
   margin:auto
 }
 .highlight2 {
-  color: #463765; 
+  color: #7591be; 
   font-weight: 600;
 }
 
@@ -186,7 +187,8 @@ body::after {
   left: 0px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
-  color: #925c93;
+  color: #444444;
+  
   font-weight: 600;
   z-index: 10;
 
@@ -206,7 +208,7 @@ body::after {
   right: 0px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
-  color: #925c93;
+  color: #444444;
   font-weight: 600;
   z-index: 10;
 
@@ -230,11 +232,12 @@ body::after {
 .subtitulo {
   font-size: 2.0rem;
   margin: 0;
-  color: #4e3b61;
+  color: #7591be;
 }
 
 .subtitulo span {
-  color: #925c93;
+  color: #000000;
+  
   font-weight: bold;
 }
 
@@ -317,6 +320,8 @@ body::after {
 
   .corner-text-bottom {
     font-size: 0.9rem;
+    
+    
     bottom: 40px; /* Más espacio en mobile */
     right: 20px;
   }
@@ -343,6 +348,7 @@ body::after {
     font-size: 0.8rem;
     bottom: 35px; /* Mantener visible en pantallas pequeñas */
     right: 15px;
+   
   }
 
   .portfolio-text {
@@ -385,7 +391,8 @@ body::after {
 .portfolio-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.9rem;
-  fill: #a76ca7;
+  text-shadow: 2px 1px 4px rgba(0,0,0,0.3);
+  fill: #7591be;
   font-weight: 600;
   letter-spacing: 4px;
 }

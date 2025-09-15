@@ -22,14 +22,7 @@ const Codelab: React.FC = () => {
           </p>
 
           {/* Botón hacia Instagram */}
-          <a 
-            href="https://www.instagram.com/codelab.uniandes/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="codelab-btn"
-          >
-            Visit our Instagram
-          </a>
+
         </div>
       </div>
     </section>

@@ -29,10 +29,10 @@
   padding: 15px 20px;
   border-radius: 12px;
   background: #ffffff;
-  box-shadow: 0px 5px 15px rgba(146, 92, 147, 0.25);
+  box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
   cursor: pointer;
   font-weight: 500;
-  color: #925c93;
+  color: #555;
   transition: all 0.3s ease;
     height: 70px; /* Todas iguales */
       min-height: 70px;
@@ -43,15 +43,15 @@
 }
 
 .menu-item:hover {
-  background: #f5e9f9;
+  background: #dee8f6;
   transform: translateX(5px);
 }
 
 .menu-item.activo {
-  background: linear-gradient(135deg, #925c93);
+  background: linear-gradient(135deg, #7591be);
   color: #fff;
   font-weight: 600;
-  box-shadow: 0px 8px 20px rgba(146, 92, 147, 0.35);
+  box-shadow: 0px 8px 20px #7591be;
 }
 
 /* Detalles del proyecto */
@@ -63,19 +63,19 @@
   background: #ffffff;
   border-radius: 16px;
   padding: 40px;
-  box-shadow: 0px 8px 20px rgba(146, 92, 147, 0.25);
+  box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-detail:hover {
     font-size: 1.2rem;
   transform: scale(1.02);
-  box-shadow: 0px 12px 25px rgba(146, 92, 147, 0.3);
+  box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
 }
 
 .project-detail h2 {
           font-family: 'Montserrat', sans-serif;
-  color: #925c93;
+  color: #444;
   margin-bottom: 20px;
   font-size: 1.2rem;
 }
@@ -87,9 +87,10 @@ html, body {
 }
 .projects-title {
   font-family: 'Outfit', sans-serif;
-  font-weight: 400; /* prueba 200, 300 o 400 */ 
+  font-weight: 550; /* prueba 200, 300 o 400 */ 
   font-size: 3rem;
-  color: #463765;
+   text-shadow: 2px 1px 4px rgba(0,0,0,0.3);
+  color: #7591be;
   margin-bottom: 40px;
   text-align: left;
   margin-left: 10%;
@@ -99,7 +100,7 @@ html, body {
   max-width: 500px;
   border-radius: 14px;
   margin-bottom: 20px;
-  box-shadow: 0px 5px 15px rgba(146, 92, 147, 0.2);
+
 }
 
 .project-detail p {
@@ -111,14 +112,14 @@ html, body {
 }
 
 .project-detail strong {
-  color: #4e3b61;
+  color: #555;
 }
 
 .project-detail a {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 20px;
-  background: linear-gradient(135deg, #925c93);
+  background: linear-gradient(135deg, #7591be);
   color: white;
   border-radius: 8px;
   font-weight: 600;
@@ -127,7 +128,7 @@ html, body {
 }
 
 .project-detail a:hover {
-  background: linear-gradient(135deg, #925c93);
+  background: linear-gradient(135deg, #7591be);
   transform: translateY(-2px);
 }
 

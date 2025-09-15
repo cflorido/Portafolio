@@ -1,5 +1,14 @@
 .footer {
-  background: linear-gradient(to right, #925c93);
+   background: linear-gradient(
+  135deg,
+  #738fbd 0%,
+  #a8c3d4 20%,
+
+  #eec6c7 60%,
+  #db88a4 80%,
+  #cc8eb1 100%
+);
+
   color: #fff;
   padding: 40px 20px;
   margin-top: 80px;
@@ -26,7 +35,7 @@
 .footer-text {
         font-family: 'Montserrat', sans-serif;
   font-size: 1.0rem;
-  color: #f7eafc;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 

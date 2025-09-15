@@ -17,43 +17,43 @@ const Skills: React.FC = () => {
     {
       id: 1,
       name: "Programming",
-      icon: <FaCode size={50} color="#925c93" />,
-      color: "#925c93",
+      icon: <FaCode size={50} color="#555" />,
+      color: "#7591be",
       skills: ["Python", "Java", "JavaScript", "TypeScript", "SQL"]
     },
     {
       id: 2,
       name: "Frameworks",
-      icon: <FaReact size={50} color="#925c93" />,
-      color: "#925c93",
+      icon: <FaReact size={50} color="#555"/>,
+      color: "#7591be",
       skills: ["React", "Angular", "Node.js", "Spring Boot", "Flask", "Django"]
     },
     {
       id: 3,
       name: "Databases",
-      icon: <FaDatabase size={50} color="#925c93" />,
-      color: "#925c93",
+      icon: <FaDatabase size={50} color="#555" />,
+      color: "#7591be",
       skills: ["MySQL", "PostgreSQL", "MongoDB"]
     },
     {
       id: 4,
       name: "DevOps",
-      icon: <FaCogs size={50} color="#925c93" />,
-      color: "#925c93",
+      icon: <FaCogs size={50} color="#555" />,
+      color: "#7591be",
       skills: ["Docker", "Kubernetes", "CI/CD (Jenkins, GitHub Actions)"]
     },
     {
       id: 5,
       name: "Data",
-      icon: <FaChartBar size={50} color="#925c93" />,
-      color: "#925c93",
+      icon: <FaChartBar size={50} color="#555" />,
+      color: "#7591be",
       skills: ["Pandas", "NumPy", "TensorFlow", "Scikit-learn", "Data Visualization"]
     },
     {
       id: 6,
       name: "Other",
-      icon: <FaGlobe size={50} color="#925c93" />,
-      color: "#925c93",
+      icon: <FaGlobe size={50} color="#555" />,
+      color: "#7591be",
       skills: ["Git", "Agile (Scrum)", "Cloud (AWS, GCP)"]
     }
   ];

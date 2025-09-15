@@ -91,18 +91,19 @@ if (sectionRef.current) {
   // Estilos dinámicos para los brillitos
   const getSparkleStyle = (point: any) => {
     const { size, opacity, hue } = point;
-  return {
-    left: point.x - size / 2,
-    top: point.y - size / 2,
-    width: size,
-    height: size,
-    opacity: opacity,
-    background: `radial-gradient(circle, 
-                  hsl(${hue}, 60%, 85%) 0%, 
-                  hsl(${hue}, 50%, 75%) 50%, 
-                  transparent 100%)`,
-    filter: `drop-shadow(0 0 ${size}px hsl(${hue}, 60%, 80%))`,
-  };
+return { 
+  left: point.x - size / 2,
+  top: point.y - size / 2,
+  width: size,
+  height: size,
+  opacity: opacity,
+  background: `radial-gradient(circle, 
+                rgba(255,255,255,1) 0%, 
+                rgba(255,255,255,0.8) 50%, 
+                transparent 100%)`,
+  filter: `drop-shadow(0 0 ${size}px rgba(255,255,255,0.7))`,
+};
+
   };
 
   return (

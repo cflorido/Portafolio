@@ -60,6 +60,7 @@ function App() {
     <>
       <Navbar />
       <div className="portfolio-container">
+        
         {/* Texto esquina superior izquierda */}
         <div className="corner-text-top">
           <span className="hello">Hello!</span> <br />
@@ -95,15 +96,20 @@ function App() {
         <div className="bolas">
           <span></span>
           <span></span>
+
         </div>
         <CareerHistory />
       </section>
+
       <Codelab />
+
+      
       <Data />
       <section id="skills" className="skills-section">
         <div className="bolas">
           <span></span>
           <span></span>
+
         </div>
         <Skills />
       </section>

@@ -2,7 +2,7 @@
   position: relative;
   min-height: 55vh;
   overflow: hidden;
-  border-radius: 20px;
+
   z-index: 1;
 
   display: flex; /* 👈 Agregamos flexbox */
@@ -44,7 +44,7 @@
 
 
 .highlight {
-  color: #463765;
+  color: #7591be;
   font-weight: 600;
 }
 
@@ -68,13 +68,13 @@
 
 .circle:hover {
   transform: translateY(-5px) scale(1.1);
-  box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
+
 }
 
 .hobby-name {
   font-family: 'Outfit', sans-serif;
   font-weight: 400; /* prueba 200, 300 o 400 */ font-size: 3rem;
-  color: #f0e6f7;
+  color: #ffffff;
 
   font-size: 1.2rem;
   text-align: center;
@@ -91,8 +91,16 @@
   position: relative;
 
   overflow: hidden;
-  border-radius: 24px;
-  background: linear-gradient(to bottom right, #463765);
+
+    background: linear-gradient(
+  135deg,
+  #738fbd 0%,
+  #a8c3d4 20%,
+
+  #eec6c7 60%,
+  #db88a4 80%,
+  #cc8eb1 100%
+);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,29 +169,30 @@
 }
 
 .hobby-name-text {
+   text-shadow: 2px 1px 4px rgba(0,0,0,0.3);
   font-size: 1.25rem; /* text-xl */
   font-weight: 600;
-  fill: #f0e6f7; /* purple-100 */
-font-family: 'Montserrat', sans-serif;
+  fill: #ffffff; /* purple-100 */
+  font-family: 'Outfit', sans-serif;
 }
 
 .circle {
   width: 128px; /* w-32 */
   height: 128px; /* h-32 */
   border-radius: 50%;
-  background: linear-gradient(to bottom right, #925c93); /* purple-100 to purple-200 */
+  background: linear-gradient(to bottom right, #ffffff); /* purple-100 to purple-200 */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-  color: #f9f7eb; /* purple-600 */
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-xl */
+  color: #555; /* purple-600 */
+  
   transition: all 0.3s ease;
 }
 
 .hobby-item:hover .circle {
   transform: scale(1.1) translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* shadow-2xl */
+  
 }
 
 /* Responsive */
@@ -212,7 +221,7 @@ font-family: 'Montserrat', sans-serif;
   left: 20px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  color: #f0e6f7;
+  color: #ffffff;
   font-weight: 500;
   z-index: 20;
     margin: 0 5%;
@@ -224,7 +233,7 @@ font-family: 'Montserrat', sans-serif;
   right: 20px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  color: #f0e6f7;
+  color: #ffffff;
   font-weight: 500;
   text-align: right;
     margin: 0 5%;

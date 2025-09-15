@@ -1,13 +1,21 @@
 .navbar {
   width: 100%;
-  background: linear-gradient(to bottom, #925c93);
+  background: linear-gradient(
+  135deg,
+  #738fbd 0%,
+  #a8c3d4 20%,
+
+  #eec6c7 60%,
+  #db88a4 80%,
+  #cc8eb1 100%
+);
+
   color: #fff;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 9999;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+
   box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
   padding: 5px 20px;
   height: 70px; /* altura del navbar */
@@ -47,7 +55,7 @@ body {
   font-family: "Outfit", sans-serif;
   font-size: 1.05rem;
   text-decoration: none;
-  color: #f7eafc;
+  color: #ffffff;
   font-weight: 300;
   transition: color 0.3s ease, transform 0.3s ease;
 }

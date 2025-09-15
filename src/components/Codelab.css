@@ -2,7 +2,7 @@
 
   padding: 0px 30px;
   display: flex;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
   justify-content: center;
   align-items: center;
 }
@@ -26,17 +26,24 @@
   transform: scale(1.05);
 
 }
+.codelab-btn:active,
+.codelab-btn:focus {
+  color: #fff; /* mismo color que en estado normal */
+  outline: none; /* quita borde azul si no lo quieres */
+}
 
 .codelab-text {
   flex: 1;
   font-family: 'Montserrat', sans-serif;
-  color: #463765;
+  
+  color: #7591be;
 }
 
 .codelab-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #925c93;
+   text-shadow: 2px 1px 4px rgba(0,0,0,0.3);
+  color: #7591be;
   margin-bottom: 10px;
 }
 
@@ -57,7 +64,7 @@
 .codelab-btn {
   display: inline-block;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #cc8eb1;
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
@@ -68,7 +75,7 @@
 .codelab-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  background: #7591be;
 }
 
 /* 📱 Responsivo */

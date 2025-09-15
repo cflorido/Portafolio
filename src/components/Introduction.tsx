@@ -91,18 +91,18 @@ const Introduction = ({ id: _id }: { id?: string }) => {
   // Estilos dinámicos para los brillitos
   const getSparkleStyle = (point: any) => {
     const { size, opacity, hue } = point;
-  return {
-    left: point.x - size / 2,
-    top: point.y - size / 2,
-    width: size,
-    height: size,
-    opacity: opacity,
-    background: `radial-gradient(circle, 
-                  hsl(${hue}, 60%, 85%) 0%, 
-                  hsl(${hue}, 50%, 75%) 50%, 
-                  transparent 100%)`,
-    filter: `drop-shadow(0 0 ${size}px hsl(${hue}, 60%, 80%))`,
-  };
+return { 
+  left: point.x - size / 2,
+  top: point.y - size / 2,
+  width: size,
+  height: size,
+  opacity: opacity,
+  background: `radial-gradient(circle, 
+                rgba(255,255,255,1) 0%, 
+                rgba(255,255,255,0.8) 50%, 
+                transparent 100%)`,
+  filter: `drop-shadow(0 0 ${size}px rgba(255,255,255,0.7))`,
+};
   };
 
   return (
@@ -144,11 +144,11 @@ const Introduction = ({ id: _id }: { id?: string }) => {
       <div className="intro-content">
         <p>
           Passionate about{" "}
-          <span className="highlight2">technology</span> and{" "}
-          <span className="highlight2">innovation</span>, with a strong interest
+          <span className="highlight5">technology</span> and{" "}
+          <span className="highlight5">innovation</span>, with a strong interest
           in solving complex problems and building impactful solutions. Skilled
           in software development, data analysis and{" "}
-          <span className="highlight2">process optimization</span>, and always
+          <span className="highlight5">process optimization</span>, and always
           eager to learn and collaborate in diverse, dynamic environments.
         </p>
       </div>

@@ -7,11 +7,12 @@
 
 .skills-title {
   font-family: 'Outfit', sans-serif;
-  font-weight: 400; /* prueba 200, 300 o 400 */ font-size: 3rem;
-  color: #463765;
+  font-weight: 550;  /* prueba 200, 300 o 400 */ font-size: 3rem;
+  color: #7591be;
   margin-bottom: 40px;
   text-align: left;
   margin-left: -9%;
+   text-shadow: 2px 1px 4px rgba(0,0,0,0.3);
 }
 
 
@@ -28,7 +29,7 @@
   border: none;
   padding: 0;
   margin: 0;
-  background-color: #d3b3d9; /* morado clarito para los inactivos */
+  background-color: #b3c1d7; /* morado clarito para los inactivos */
   cursor: pointer;
   transition: all 0.3s ease;
   appearance: none;
@@ -36,7 +37,7 @@
 }
 
 .dot.active {
-  background-color: #925c93; /* morado principal */
+  background-color: #7591be; /* morado principal */
 }
 
 .dot:hover {
@@ -149,7 +150,7 @@
 .card-title {
         font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  color: #463765;
+  color: #7591be;
   font-weight: bold;
   margin-top: 4px; /* Espacio mínimo arriba */
   margin-bottom: 6px; /* Un poco de espacio para la lista */
@@ -252,7 +253,7 @@
 }
 
 .card:not(.active):hover {
-  box-shadow: 0 10px 25px rgba(146, 92, 147, 0.4);
+  box-shadow: 0 10px 25px #7591be;
   cursor: pointer;
   position: relative;
   z-index: 9999;
@@ -264,8 +265,8 @@
   transform-origin: center center;
 }
 .card:not(.active):hover .card-icon {
-  color: #925c93; /* morado principal */
-  filter: drop-shadow(0 0 8px rgba(146, 92, 147, 0.7));
+  color: #7591be; /* morado principal */
+  filter: drop-shadow(0 0 8px #7591be);
   z-index: 9999;
 }
 
