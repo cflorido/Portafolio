@@ -7,7 +7,7 @@ const Codelab: React.FC = () => {
       <div className="codelab-container">
         {/* Logo */}
         <div className="codelab-logo">
-          <img src="public/CodeLab.png" alt="CodeLab Logo" />
+          <img src="https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/CodeLab.png" alt="CodeLab Logo" />
         </div>
 
         {/* Texto */}
