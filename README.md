@@ -27,30 +27,6 @@ It is the same portfolio you are currently exploring, built with a focus on perf
 
 ---
 
-## Project Structure
-
-mi-portafolio/
-├── dist/                  # Production build
-├── node_modules/          # Dependencies
-├── public/                # Images and static assets
-├── src/
-│   ├── assets/            # Additional resources
-│   └── components/        # Reusable React components
-│       ├── CareerHistory/
-│       ├── Codelab/
-│       ├── Data/
-│       ├── Footer/
-│       ├── Hobbies/
-│       ├── Introduction/
-│       ├── Navbar/
-│       ├── Projects/
-│       └── Skills/
-├── App.tsx
-├── index.html
-├── main.tsx
-├── vite-env.d.ts
-└── README.md
-
 # Getting Started
 
 # Clone the repository
