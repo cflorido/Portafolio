@@ -5,8 +5,6 @@ The web page will be available at https://cflorido.github.io/Portfolio/
 This repository contains the source code of my personal portfolio.  
 The website was designed to present my professional experience, highlight key projects, and provide an overview of my skills in a clear and responsive layout.  
 
-It is the same portfolio you are currently exploring, built with a focus on performance, accessibility, and a design that reflects my style and personality.
-
 ---
 
 ## Features
