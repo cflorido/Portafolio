@@ -1,24 +1,35 @@
 import { useState } from "react";
 import "./Projects.css";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = ({ id }: { id?: string }) => {
   const proyectos = [
     {
       "id": 1,
       "nombre": "Personal Portfolio",
-      "descripcion": "A sleek and responsive portfolio website designed to highlight my professional experience, showcase key projects, and provide easy access to contact information in a clean and user-friendly layout.",
+      "descripcion": "This portfolio you’re viewing right now is a fully responsive and modern website designed to adapt seamlessly to any device. Beyond serving as a showcase of my professional experience and projects, it also reflects my personal style and passion for design. My goal was to create a clean, engaging, and user-friendly space where both my work and personality come through.",
       "tecnologias": "Vite, React, TypeScript, CSS",
       "github": "https://github.com/cflorido/Portafolio",
       "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/Portafolio.png"
-    },
+    }
+    ,
     {
-      "id": 2,
-      "nombre": "Differential Privacy for Trajectories",
-      "descripcion": "An experimental project applying differential privacy algorithms to mobility trajectories, generating metrics like origin-destination matrices and heatmaps using real Beijing datasets.",
-      "tecnologias": "Python, Jupyter Notebook, NumPy, Matplotlib, Folium",
-      "github": "https://github.com/cflorido/Differential-Privacy-Mechanisms-for-Trajectories.git",
-      "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/Privacidad.png"
-    },
+  "id": 5,
+  "nombre": "Climate Derivatives Pricing",
+  "descripcion": "A research project focused on valuing temperature-based climate derivatives, specifically Heating Degree Days (HDD) and Cooling Degree Days (CDD), to mitigate climate risk in Colombian coffee-growing regions. The work combines deterministic models (Fourier series with third-degree harmonics) and stochastic models (mean reversion) to project temperature data and price temperature options. An interactive tool was also developed to explore pricing dynamics under different climate scenarios, offering risk management strategies for coffee producers against extreme temperature variations.",
+  "tecnologias": "Python, NumPy, Pandas, Statsmodels, Matplotlib",
+  "github": "https://github.com/cflorido/AppPricing.git",
+  "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/ClimatePricing.png"
+},
+      {
+        "id": 2,
+        "nombre": "Differential Privacy for Trajectories",
+        "descripcion": "This thesis project explores the application of differential privacy to human mobility trajectories, with a focus on protecting sensitive location data while preserving analytical value. The work compares different differential privacy mechanisms by varying key metrics and evaluating their impact on data utility. It produces relevant visualizations such as flow maps of trajectories, heatmaps, and origin-destination matrices, providing insight into how privacy-preserving techniques affect mobility analysis outcomes. The project balances theoretical rigor with practical experimentation using real-world datasets from Beijing.",
+        "tecnologias": "Python, Jupyter Notebook, NumPy, Matplotlib, Folium",
+        "github": "https://github.com/cflorido/Differential-Privacy-Mechanisms-for-Trajectories.git",
+        "imagen": "https://raw.githubusercontent.com/cflorido/Portfolio/refs/heads/master/public/Privacidad.png"
+      }
+      ,
     {
       "id": 3,
       "nombre": "Text Analytics for Political Fake News Detection",
@@ -29,7 +40,7 @@ const Projects = ({ id }: { id?: string }) => {
     },
     {
       "id": 4,
-      "nombre": "Banking Products Analysis",
+      "nombre": "Banking subscription Prediction",
       "descripcion": "A comprehensive project analyzing customer behavior and predicting subscription to term deposits (CDTs) using data cleaning, exploratory analysis, and machine learning models. The project includes visualization dashboards, predictive modeling with neural networks and Random Forest, threshold optimization to maximize expected bank revenue, and deployment on AWS.",
       "tecnologias": "Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, SMOTEENN, Dash, AWS",
       "github": "https://github.com/cflorido/Proyecto_2_Analitica",
@@ -65,14 +76,16 @@ const Projects = ({ id }: { id?: string }) => {
             <p>{seleccionado.descripcion}</p>
             <p><strong>Technologies:</strong> {seleccionado.tecnologias}</p>
           </div>
-          <a
-            href={seleccionado.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="github-link-projects"
-          >
-            GitHub
-          </a>
+<a
+  href={seleccionado.github}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="github-link-projects"
+>
+  <FaGithub style={{ marginRight: "8px", color: "white" }} />
+  GitHub
+</a>
+
         </div>
       </div>
     </div>
