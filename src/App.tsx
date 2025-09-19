@@ -98,13 +98,15 @@ function App() {
           <span></span>
 
         </div>
-        <CareerHistory />
-      </section>
 
-      <Codelab />
+      </section>
+         
+      <Projects id="projects" />
+ 
 
       
       <Data />
+    
       <section id="skills" className="skills-section">
         <div className="bolas">
           <span></span>
@@ -113,9 +115,10 @@ function App() {
         </div>
         <Skills />
       </section>
-
+    
       <Hobbies id="hobbies" />
-      <Projects id="projects" />
+ <Codelab />
+              <CareerHistory />
       <Footer/>
 
       {/* Botón Scroll to Top */}
