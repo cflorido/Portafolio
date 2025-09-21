@@ -110,7 +110,7 @@ function App() {
       <section id="skills" className="skills-section">
         <div className="bolas">
           <span></span>
-          <span></span>
+
 
         </div>
         <Skills />

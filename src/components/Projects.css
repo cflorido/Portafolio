@@ -11,10 +11,10 @@
   padding: 0 20px;
   box-sizing: border-box;
   width: 100%;
-  align-items: stretch; /* 🔹 Hace que la card derecha se estire para balancear */
+  align-items: stretch;
 }
-.projects-inner-container {
 
+.projects-inner-container {
   margin-left: 9%;
   margin-right: 9%;
 }
@@ -26,9 +26,10 @@
   color: inherit;
 }
 
-/* Menú lateral */
+/* 🔹 ARREGLADO: Menú lateral con proporción 40% */
 .projects-menu-projects {
-  flex: 1;
+  flex: 0 0 40%; /* 🔹 40% del espacio disponible, no puede crecer ni encogerse */
+  max-width: 40%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -46,7 +47,6 @@
   transition: all 0.3s ease;
   height: 70px;
   min-height: 70px;
-  min-width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +80,7 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
-  opacity: 0; /* 🔹 Por defecto oculto */
+  opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
 }
@@ -92,28 +92,31 @@
 
 /* 🔹 ARREGLADO: Borde gradiente SIEMPRE visible para item activo */
 .menu-item-projects.activo-projects {
-  background: #ffffff; /* 🔹 Cambiado: fondo blanco en lugar del gradiente */
-  color: #7591be; /* 🔹 Cambiado: texto en color del tema */
+  background: #ffffff;
+  color: #7591be;
   font-weight: 600;
 }
 
 /* 🔹 ARREGLADO: Item activo SIEMPRE muestra el borde gradiente */
 .menu-item-projects.activo-projects::before {
-  opacity: 1; /* 🔹 SIEMPRE VISIBLE cuando está activo */
+  opacity: 1;
 }
 
 /* 🔹 Mostrar borde gradiente al hacer hover SOLO en items NO activos */
 .menu-item-projects:not(.activo-projects):hover::before {
-  opacity: 0.7; /* 🔹 Sutil en hover */
+  opacity: 0.7;
 }
 
-/* 🔹 Detalles del proyecto con línea gradiente superior */
+/* 🔹 Wrapper para el project detail con proporción 60% */
+.project-detail-wrapper-projects {
+  flex: 0 0 60%; /* 🔹 60% del espacio disponible, no puede crecer ni encogerse */
+  max-width: 60%;
+}
+
+/* 🔹 ARREGLADO: Detalles del proyecto ahora usa todo el espacio del wrapper */
 .project-detail-projects {
-  width: 530px;
-  min-width: 530px;
-  max-width: 530px;
-  min-height: 650px;  /* mantiene altura mínima */
-  flex: 2;
+  width: 100%; /* 🔹 Usa todo el espacio del wrapper (60%) */
+  min-height: 650px;
   background: #ffffff;
   border-radius: 16px;
   padding: 40px;
@@ -124,10 +127,10 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  height: auto; /* 🔹 se ajusta automáticamente a la altura de los botones */
+  height: auto;
 }
 
-/* 🔹 Línea gradiente superior (como card-top de Skills) */
+/* 🔹 Línea gradiente superior */
 .project-detail-projects::before {
   content: '';
   position: absolute;
@@ -147,7 +150,6 @@
 }
 
 .project-detail-projects:hover {
-  font-size: 1.2rem;
   transform: scale(1.02);
   box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
 }
@@ -159,7 +161,6 @@
   font-size: 1.2rem;
   flex-shrink: 0;
 }
-
 
 .projects-title-projects {
   font-family: 'Outfit', sans-serif;
@@ -177,7 +178,6 @@
 .project-detail-projects img {
   width: 100%;
   height: 200px;
-  max-width: 450px;
   object-fit: cover;
   border-radius: 14px;
   margin-bottom: 20px;
@@ -243,21 +243,42 @@
   background: linear-gradient(135deg, #6a84b5, #9bb8ca);
 }
 
-/* 📱 Responsive Design */
+/* 📱 Responsive Design - PANTALLAS GRANDES mantienen la proporción 40-60 */
+@media (min-width: 1201px) {
+  .projects-container-projects {
+    gap: 80px; /* 🔹 Gap más grande en pantallas muy grandes */
+  }
+  
+  .projects-menu-projects {
+    flex: 0 0 38%; /* 🔹 Ligeramente menos para dar más espacio al gap */
+    max-width: 38%;
+  }
+  
+  .project-detail-wrapper-projects {
+    flex: 0 0 58%; /* 🔹 Ajustado para compensar el gap más grande */
+    max-width: 58%;
+  }
+}
+
 @media (max-width: 1200px) {
   .projects-container-projects {
-    max-width: 90%;
     gap: 50px;
     padding: 0 15px;
   }
   
+  /* 🔹 MANTIENE las proporciones 40-60 */
+  .projects-menu-projects {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  
+  .project-detail-wrapper-projects {
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+  
   .project-detail-projects {
-    width: 480px;
-    min-width: 480px;
-    max-width: 480px;
-    height: 600px;
     min-height: 600px;
-    max-height: 600px;
     padding: 35px;
   }
   
@@ -267,6 +288,7 @@
   }
 }
 
+/* 🔹 A partir de 992px hacia abajo, cambia a diseño móvil (columnas) */
 @media (max-width: 992px) {
   .projects-container-projects {
     flex-direction: column-reverse;
@@ -275,11 +297,19 @@
     max-width: 95%;
   }
 
+  /* 🔹 En móvil, los elementos ocupan todo el ancho */
   .projects-menu-projects {
+    flex: none;
+    max-width: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+  }
+  
+  .project-detail-wrapper-projects {
+    flex: none;
+    max-width: none;
   }
 
   .menu-item-projects {
@@ -294,11 +324,7 @@
 
   .project-detail-projects {
     width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    height: 500px;
     min-height: 500px;
-    max-height: 500px;
     padding: 30px;
   }
 
@@ -332,9 +358,7 @@
   }
 
   .project-detail-projects {
-    height: 450px;
     min-height: 450px;
-    max-height: 450px;
     padding: 25px;
   }
 
@@ -378,9 +402,7 @@
   }
 
   .project-detail-projects {
-    height: 400px;
     min-height: 400px;
-    max-height: 400px;
     padding: 20px;
   }
 
@@ -425,9 +447,7 @@
   }
 
   .project-detail-projects {
-    height: 350px;
     min-height: 350px;
-    max-height: 350px;
     padding: 15px;
   }
 

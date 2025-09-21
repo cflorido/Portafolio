@@ -177,7 +177,7 @@ return {
         </text>
       </svg>
       <div className="circle">
-        <i className="fas fa-yarn"></i>
+<i className="fas fa-scissors"></i>
       </div>
     </div>
 
