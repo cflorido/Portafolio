@@ -11,7 +11,7 @@
   padding: 0 20px;
   box-sizing: border-box;
   width: 100%;
-  
+  align-items: stretch; /* 🔹 Hace que la card derecha se estire para balancear */
 }
 .projects-inner-container {
 
@@ -109,14 +109,10 @@
 
 /* 🔹 Detalles del proyecto con línea gradiente superior */
 .project-detail-projects {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
   width: 530px;
   min-width: 530px;
   max-width: 530px;
-  height: 650px;
-  min-height: 650px;
-  max-height: 650px;
+  min-height: 650px;  /* mantiene altura mínima */
   flex: 2;
   background: #ffffff;
   border-radius: 16px;
@@ -128,6 +124,7 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  height: auto; /* 🔹 se ajusta automáticamente a la altura de los botones */
 }
 
 /* 🔹 Línea gradiente superior (como card-top de Skills) */

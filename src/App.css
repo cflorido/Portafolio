@@ -209,9 +209,9 @@ body::after {
   min-height: 0%;
   margin: 0;
   width: 100%;
-  max-width: 82%; /* 100% - (9% + 9%) */
-  margin: 0 auto; /* centra el contenido */
-  padding: 0; /* si quieres, podrías dejar padding lateral para móviles */
+  max-width: 82%; 
+  margin: 0 auto; 
+  padding: 0; 
   box-sizing: border-box;
 }
 .highlight2 {

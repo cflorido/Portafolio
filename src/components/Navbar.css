@@ -15,8 +15,8 @@
   left: 0;
   z-index: 9999;
   box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
-  padding: 5px 20px;
-  height: 50px;
+  padding: 10px 20px; /* Aumenté el padding vertical */
+  height: 60px; /* Aumenté la altura para acomodar el logo */
   box-sizing: border-box;
 }
 
@@ -31,11 +31,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%; /* Asegura que use toda la altura del navbar */
 }
 
 /* === Logo === */
+.navbar-logo {
+  display: flex;
+  align-items: center; /* Centra el logo verticalmente */
+}
+
 .navbar-logo img {
-  height: 55px;
+  height: 45px; /* Reduje la altura para que quepa mejor */
   transition: transform 0.3s ease;
 }
 
@@ -47,15 +53,20 @@ body {
 .navbar-links {
   display: flex;
   gap: 2rem;
+  align-items: center; /* Centra los links verticalmente */
+  height: 100%;
 }
 
 .navbar-links a {
   font-family: "Outfit", sans-serif;
+    letter-spacing: 1px;
   font-size: 1.05rem;
   text-decoration: none;
   color: #ffffff;
   font-weight: 300;
   transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center; /* Centra cada link individualmente */
 }
 
 .navbar-links a:hover {
@@ -63,21 +74,19 @@ body {
   transform: translateY(-2px);
 }
 
-.navbar-logo img {
-    height: 45px; 
-  margin-top: -2px; /* empuja hacia arriba */
-}
 /* === Botón Hamburguesa === */
 .menu-toggle {
   display: none;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center; 
+  align-items: center;
   width: 25px;
   height: 20px;
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 10000; /* encima del menú */
+  z-index: 10000;
+  gap: 3px; 
 }
 
 .menu-toggle .bar {
@@ -102,7 +111,7 @@ body {
 @media (max-width: 768px) {
   .navbar-links {
     position: absolute;
-    top: 70px;
+    top: 60px; /* Ajustado a la nueva altura del navbar */
     right: 0;
     width: 100%;
     background: linear-gradient(
@@ -123,6 +132,7 @@ body {
     transition: all 0.4s ease;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    height: auto; /* Permite que la altura sea automática en móvil */
   }
 
   .navbar-links.open {

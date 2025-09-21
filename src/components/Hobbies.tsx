@@ -150,7 +150,7 @@ return {
   </div>
 
   {/* Texto esquina inferior derecha */}
-  <div className="corner-text-bottom-hobbies">
+  <div className="corner-text-bottom-hobbies2">
     Now you know<br /> 
      me a little bit better
   </div>
