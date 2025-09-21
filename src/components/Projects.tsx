@@ -55,233 +55,379 @@ const Projects = ({ id }: { id?: string }) => {
 
   const [seleccionado, setSeleccionado] = useState(proyectos[0]);
 
-  const styles = {
-    section: {
-      padding: '0'
-    },
-    container: {
-      display: 'flex',
-      maxWidth: '100%',
-      margin: '0',
-      gap: '70px',
-      fontFamily: "'Montserrat', sans-serif",
-      color: '#4e3b61',
-      marginBottom: '5%',
-      marginTop: '5%',
-      padding: '0 20px',
-      boxSizing: 'border-box' as const,
-      width: '100%',
-      alignItems: 'stretch'
-    },
-    innerContainer: {
-      marginLeft: '9%',
-      marginRight: '13%'
-    },
-    title: {
-      fontFamily: "'Outfit', sans-serif",
-      fontWeight: 600,
-      fontSize: '2.9rem',
-      color: '#7591be',
-      marginTop: '5%',
-      marginBottom: '40px',
-      textAlign: 'center' as const,
-      letterSpacing: '4px',
-      maxWidth: '100%',
-      padding: '0 20px',
-      boxSizing: 'border-box' as const
-    },
-    menu: {
-      flex: '0 0 40%',
-      maxWidth: '40%',
-      display: 'flex',
-      flexDirection: 'column' as const,
-      height: '650px',
-      justifyContent: 'space-between'
-    },
-    menuItem: {
-      flex: '1',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      marginBottom: '15px',
-      padding: '15px 20px',
-      borderRadius: '12px',
-      background: '#ffffff',
-      boxShadow: '0px 5px 20px rgba(146, 92, 147, 0.2)',
-      cursor: 'pointer',
-      fontWeight: 500,
-      color: '#555',
-      transition: 'all 0.3s ease',
-      position: 'relative' as const,
-      border: '2px solid transparent',
-      backgroundClip: 'padding-box',
-      textAlign: 'center' as const,
-      fontSize: '0.95rem'
-    },
-    menuItemLast: {
-      marginBottom: '0'
-    },
-    menuItemActive: {
-      background: '#ffffff',
-      color: '#7591be',
-      fontWeight: 600,
-      boxShadow: '0px 5px 20px rgba(146, 92, 147, 0.3)',
-      transform: 'translateX(5px)'
-    },
-    detailWrapper: {
-      flex: '0 0 60%',
-      maxWidth: '60%'
-    },
-    projectDetail: {
-      width: '100%',
-      height: '650px',
-      background: '#ffffff',
-      borderRadius: '16px',
-      padding: '40px',
-      boxShadow: '0px 5px 20px rgba(146, 92, 147, 0.2)',
-      transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-      position: 'relative' as const,
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column' as const,
-      boxSizing: 'border-box' as const
-    },
-    projectDetailBorder: {
-      content: "''",
-      position: 'absolute' as const,
-      top: 0,
-      left: 0,
-      right: 0,
-      height: '4px',
-      background: 'linear-gradient(135deg, #738fbd 0%, #a8c3d4 20%, #eec6c7 60%, #db88a4 80%, #cc8eb1 100%)',
-      borderRadius: '16px 16px 0 0'
-    },
-    projectImage: {
-      width: '100%',
-      height: '200px',
-      objectFit: 'cover' as const,
-      borderRadius: '14px',
-      marginBottom: '20px',
-      flexShrink: 0
-    },
-    projectContent: {
-      flex: 1,
-      overflowY: 'auto' as const,
-      paddingRight: '10px'
-    },
-    projectText: {
-      fontFamily: "'Montserrat', sans-serif",
-      fontSize: '1rem',
-      margin: '10px 0',
-      lineHeight: 1.6,
-      color: '#555',
-      fontWeight: 300,
-      letterSpacing: '0.3px'
-    },
-    // Nuevo estilo para "Technologies:" resaltado en azul
-    technologiesLabel: {
-      color: '#7591be',
-      fontWeight: 600
-    },
-    githubLink: {
-      display: 'inline-flex',
-      alignItems: 'center',
-      marginTop: '15px',
-      padding: '12px 20px',
-      color: 'white',
-      background: 'linear-gradient(135deg, #7591be, #a8c3d4)',
-      borderRadius: '8px',
-      fontWeight: 600,
-      textDecoration: 'none',
-      transition: '0.3s',
-      flexShrink: 0,
-      fontSize: '1rem',
-      fontFamily: "'Montserrat', sans-serif",
-      // Cambio: width auto para que sea más compacto
-      width: 'auto',
-      alignSelf: 'flex-start' // Para que no se estire
-    },
-    githubIcon: {
-      marginRight: '8px',
-      color: 'white'
-    }
-  };
-
   return (
-    <section id={id} style={styles.section}>
-      <h2 style={styles.title}>Portfolio highlights</h2>
-      <div style={styles.innerContainer}>
-        <div style={styles.container}>
-          {/* Menú de proyectos */}
-          <div style={styles.menu}>
-            {proyectos.map((proyecto, index) => (
-              <div
-                key={proyecto.id}
-                style={{
-                  ...styles.menuItem,
-                  ...(index === proyectos.length - 1 ? styles.menuItemLast : {}),
-                  ...(seleccionado.id === proyecto.id ? styles.menuItemActive : {})
-                }}
-                onClick={() => setSeleccionado(proyecto)}
-                onMouseEnter={(e) => {
-                  if (seleccionado.id !== proyecto.id) {
-                    e.currentTarget.style.transform = 'translateX(5px)';
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (seleccionado.id !== proyecto.id) {
-                    e.currentTarget.style.transform = 'translateX(0px)';
-                  }
-                }}
-              >
-                {proyecto.nombre}
-              </div>
-            ))}
-          </div>
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap');
 
-          {/* Detalle del proyecto */}
-          <div style={styles.detailWrapper}>
-            <div 
-              style={styles.projectDetail}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.02)';
-                e.currentTarget.style.boxShadow = '0px 8px 30px rgba(146, 92, 147, 0.3)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = '0px 5px 20px rgba(146, 92, 147, 0.2)';
-              }}
-            >
-              <div style={styles.projectDetailBorder}></div>
-              <img src={seleccionado.imagen} alt={seleccionado.nombre} style={styles.projectImage} />
-              <div style={styles.projectContent}>
-                <p style={styles.projectText}>
-                  <span style={styles.technologiesLabel}>Technologies:</span> {seleccionado.tecnologias}
-                </p>
-                <p style={styles.projectText}>{seleccionado.descripcion}</p>
+        .projects-container-projects {
+          display: flex;
+          max-width: 100%;
+          margin: 0;
+          gap: 70px;
+          font-family: 'Montserrat', sans-serif;
+          color: #4e3b61;
+          margin-bottom: 5%;
+          margin-top: 5%;
+          padding: 0 20px;
+          box-sizing: border-box;
+          width: 100%;
+          align-items: stretch;
+        }
+
+        .projects-inner-container {
+          margin-left: 9%;
+          margin-right: 13%;
+        }
+
+        .projects-title-projects {
+          font-family: 'Outfit', sans-serif;
+          font-weight: 600;
+          font-size: 2.9rem;
+          color: #7591be;
+          margin-top: 5%;
+          margin-bottom: 40px;
+          text-align: center;
+          letter-spacing: 4px;
+          max-width: 100%;
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
+
+        .projects-menu-projects {
+          flex: 0 0 40%;
+          max-width: 40%;
+          display: flex;
+          flex-direction: column;
+          height: 650px;
+          justify-content: space-between;
+        }
+
+        .menu-item-projects {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 15px;
+          padding: 15px 20px;
+          border-radius: 12px;
+          background: #ffffff;
+          box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
+          cursor: pointer;
+          font-weight: 500;
+          color: #555;
+          transition: all 0.3s ease;
+          position: relative;
+          border: 2px solid transparent;
+          background-clip: padding-box;
+          text-align: center;
+          font-size: 0.95rem;
+        }
+
+        .menu-item-projects:last-child {
+          margin-bottom: 0;
+        }
+
+        .menu-item-projects:hover {
+          transform: translateX(5px);
+        }
+
+        .menu-item-projects.activo-projects {
+          background: #ffffff;
+          color: #7591be;
+          font-weight: 600;
+          box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.3);
+          transform: translateX(5px);
+        }
+
+        .project-detail-wrapper-projects {
+          flex: 0 0 60%;
+          max-width: 60%;
+        }
+
+        .project-detail-projects {
+          width: 100%;
+          height: 650px;
+          background: #ffffff;
+          border-radius: 16px;
+          padding: 40px;
+          box-shadow: 0px 5px 20px rgba(146, 92, 147, 0.2);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+        }
+
+        .project-detail-projects::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(135deg, #738fbd 0%, #a8c3d4 20%, #eec6c7 60%, #db88a4 80%, #cc8eb1 100%);
+          border-radius: 16px 16px 0 0;
+        }
+
+        .project-detail-projects:hover {
+          transform: scale(1.02);
+          box-shadow: 0px 8px 30px rgba(146, 92, 147, 0.3);
+        }
+
+        .project-detail-projects img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 14px;
+          margin-bottom: 20px;
+          flex-shrink: 0;
+        }
+
+        .project-content-projects {
+          flex: 1;
+          overflow-y: auto;
+          padding-right: 10px;
+        }
+
+        .project-content-projects::-webkit-scrollbar {
+          width: 6px;
+        }
+
+        .project-content-projects::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 3px;
+        }
+
+        .project-content-projects::-webkit-scrollbar-thumb {
+          background: linear-gradient(135deg, #7591be, #a8c3d4);
+          border-radius: 3px;
+        }
+
+        .project-text-projects {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 1rem;
+          margin: 10px 0;
+          line-height: 1.6;
+          color: #555;
+          font-weight: 300;
+          letter-spacing: 0.3px;
+        }
+
+        .technologies-label-projects {
+          color: #7591be;
+          font-weight: 600;
+        }
+
+        .github-link-projects {
+          display: inline-flex;
+          align-items: center;
+          margin-top: 15px;
+          padding: 12px 20px;
+          color: white;
+          background: linear-gradient(135deg, #7591be, #a8c3d4);
+          border-radius: 8px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: 0.3s;
+          flex-shrink: 0;
+          font-size: 1rem;
+          font-family: 'Montserrat', sans-serif;
+          width: auto;
+          align-self: flex-start;
+        }
+
+        .github-link-projects:hover {
+          transform: translateY(-2px);
+          box-shadow: 0px 5px 15px rgba(117, 145, 190, 0.4);
+        }
+
+        .github-icon-projects {
+          margin-right: 8px;
+          color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+          .projects-container-projects {
+            flex-direction: column-reverse;
+            gap: 30px;
+            padding: 30px 20px;
+            max-width: 95%;
+          }
+
+          .projects-menu-projects {
+            flex: none;
+            max-width: none;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            height: auto;
+          }
+          
+          .project-detail-wrapper-projects {
+            flex: none;
+            max-width: none;
+          }
+
+          .menu-item-projects {
+            flex: 1 1 45%;
+            text-align: center;
+            min-width: 120px;
+            height: 60px;
+            min-height: 60px;
+            padding: 12px 15px;
+            font-size: 0.9rem;
+          }
+
+          .project-detail-projects {
+            width: 100%;
+            min-height: 500px;
+            height: auto;
+            padding: 30px;
+          }
+
+          .project-detail-projects img {
+            height: 150px;
+          }
+          
+          .projects-title-projects {
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .projects-container-projects {
+            gap: 25px;
+            padding: 25px 15px;
+            max-width: 100%;
+          }
+
+          .projects-menu-projects {
+            gap: 8px;
+          }
+
+          .menu-item-projects {
+            flex: 1 1 100%;
+            height: 55px;
+            min-height: 55px;
+            padding: 10px 12px;
+            font-size: 0.85rem;
+          }
+
+          .project-detail-projects {
+            min-height: 450px;
+            padding: 25px;
+          }
+
+          .project-detail-projects img {
+            height: 130px;
+          }
+          
+          .projects-title-projects {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+          }
+          
+          .project-text-projects {
+            font-size: 0.9rem;
+            margin: 8px 0;
+          }
+          
+          .github-link-projects {
+            padding: 10px 16px;
+            font-size: 0.9rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .projects-container-projects {
+            gap: 20px;
+            padding: 20px 10px;
+          }
+
+          .menu-item-projects {
+            height: 50px;
+            min-height: 50px;
+            padding: 8px 10px;
+            font-size: 0.8rem;
+          }
+
+          .project-detail-projects {
+            min-height: 400px;
+            padding: 20px;
+          }
+
+          .project-detail-projects img {
+            height: 110px;
+          }
+          
+          .projects-title-projects {
+            font-size: 1.5rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 25px;
+          }
+          
+          .project-text-projects {
+            font-size: 0.85rem;
+            margin: 6px 0;
+            line-height: 1.5;
+          }
+          
+          .github-link-projects {
+            padding: 8px 14px;
+            font-size: 0.85rem;
+          }
+        }
+      `}</style>
+      
+      <section id={id} style={{ padding: '0' }}>
+        <h2 className="projects-title-projects">Portfolio highlights</h2>
+        <div className="projects-inner-container">
+          <div className="projects-container-projects">
+            {/* Menú de proyectos */}
+            <div className="projects-menu-projects">
+              {proyectos.map((proyecto) => (
+                <div
+                  key={proyecto.id}
+                  className={`menu-item-projects ${seleccionado.id === proyecto.id ? 'activo-projects' : ''}`}
+                  onClick={() => setSeleccionado(proyecto)}
+                >
+                  {proyecto.nombre}
+                </div>
+              ))}
+            </div>
+
+            {/* Detalle del proyecto */}
+            <div className="project-detail-wrapper-projects">
+              <div className="project-detail-projects">
+                <img src={seleccionado.imagen} alt={seleccionado.nombre} />
+                <div className="project-content-projects">
+                  <p className="project-text-projects">
+                    <span className="technologies-label-projects">Technologies:</span> {seleccionado.tecnologias}
+                  </p>
+                  <p className="project-text-projects">{seleccionado.descripcion}</p>
+                </div>
+                <a
+                  href={seleccionado.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="github-link-projects"
+                >
+                  <FaGithub className="github-icon-projects" />
+                  GitHub
+                </a>
               </div>
-              <a
-                href={seleccionado.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={styles.githubLink}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0px 5px 15px rgba(117, 145, 190, 0.4)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0px)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                <FaGithub style={styles.githubIcon} />
-                GitHub
-              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
