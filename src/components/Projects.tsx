@@ -75,7 +75,7 @@ const Projects = ({ id }: { id?: string }) => {
     },
     innerContainer: {
       marginLeft: '9%',
-      marginRight: '9%'
+      marginRight: '13%'
     },
     title: {
       fontFamily: "'Outfit', sans-serif",
@@ -95,7 +95,7 @@ const Projects = ({ id }: { id?: string }) => {
       maxWidth: '40%',
       display: 'flex',
       flexDirection: 'column' as const,
-      height: '650px', // Altura fija igual que la card de detalles
+      height: '650px',
       justifyContent: 'space-between'
     },
     menuItem: {
@@ -134,7 +134,7 @@ const Projects = ({ id }: { id?: string }) => {
     },
     projectDetail: {
       width: '100%',
-      height: '650px', // Altura fija
+      height: '650px',
       background: '#ffffff',
       borderRadius: '16px',
       padding: '40px',
@@ -178,8 +178,10 @@ const Projects = ({ id }: { id?: string }) => {
       fontWeight: 300,
       letterSpacing: '0.3px'
     },
-    strong: {
-      color: '#555'
+    // Nuevo estilo para "Technologies:" resaltado en azul
+    technologiesLabel: {
+      color: '#7591be',
+      fontWeight: 600
     },
     githubLink: {
       display: 'inline-flex',
@@ -194,7 +196,10 @@ const Projects = ({ id }: { id?: string }) => {
       transition: '0.3s',
       flexShrink: 0,
       fontSize: '1rem',
-      fontFamily: "'Montserrat', sans-serif"
+      fontFamily: "'Montserrat', sans-serif",
+      // Cambio: width auto para que sea más compacto
+      width: 'auto',
+      alignSelf: 'flex-start' // Para que no se estire
     },
     githubIcon: {
       marginRight: '8px',
@@ -251,7 +256,7 @@ const Projects = ({ id }: { id?: string }) => {
               <img src={seleccionado.imagen} alt={seleccionado.nombre} style={styles.projectImage} />
               <div style={styles.projectContent}>
                 <p style={styles.projectText}>
-                  <span style={styles.strong}>Technologies:</span> {seleccionado.tecnologias}
+                  <span style={styles.technologiesLabel}>Technologies:</span> {seleccionado.tecnologias}
                 </p>
                 <p style={styles.projectText}>{seleccionado.descripcion}</p>
               </div>
