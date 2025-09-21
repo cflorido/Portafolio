@@ -5,6 +5,7 @@ interface CareerHistoryProps {
 }
 function CareerHistory({ id: _id }: CareerHistoryProps) {
   useEffect(() => {
+    
     const items = document.querySelectorAll(".timeline-item");
     const observer = new IntersectionObserver(
       (entries) => {
@@ -22,7 +23,7 @@ function CareerHistory({ id: _id }: CareerHistoryProps) {
   }, []);
 
   return (
-    <section className="career-history">
+    <section id={_id} className="career-history">
       <h2 className="career-title">Career & Community Engagement</h2>
       <div className="timeline">
         {/* Item 1 */}

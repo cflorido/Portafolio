@@ -118,7 +118,7 @@ function App() {
     
       <Hobbies id="hobbies" />
  <Codelab />
-              <CareerHistory />
+              <CareerHistory id="history" />
       <Footer/>
 
       {/* Botón Scroll to Top */}

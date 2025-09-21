@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
 
         {/* Links */}
         <div className={`navbar-links ${isOpen ? "open" : ""}`}>
-          <a href="#career" onClick={() => setIsOpen(false)}>History</a>
+          <a href="#history" onClick={() => setIsOpen(false)}>History</a>
           <a href="#skills" onClick={() => setIsOpen(false)}>Skills</a>
           <a href="#hobbies" onClick={() => setIsOpen(false)}>Hobbies</a>
           <a href="#projects" onClick={() => setIsOpen(false)}>Projects</a>
